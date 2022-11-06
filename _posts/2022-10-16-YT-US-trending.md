@@ -1,5 +1,9 @@
-YouTube trending video data (1) - US
-================
+---
+layout: post
+title: YouTube trending video data (1) - US
+tags: kaggle, data analysis
+categories: data
+---
 
 ## US, Canada & Japan
 
