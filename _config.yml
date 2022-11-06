@@ -1,0 +1,9 @@
+# Site settings
+title: Data of Life # site.title
+author:
+  name: Linda
+  email: your-email@domain.com
+description: "A collection of data analysis in our life."
+
+# Build settings
+remote_theme: jekyll/minima
