@@ -7,3 +7,6 @@ description: "A collection of data analysis in our life."
 
 # Build settings
 remote_theme: jekyll/minima
+
+plugins:
+  - jekyll-remote-theme
