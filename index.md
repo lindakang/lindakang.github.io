@@ -4,4 +4,4 @@
 layout: home
 ---
 
-This is to collect data analysis
+A collection of data analysis in our life.
