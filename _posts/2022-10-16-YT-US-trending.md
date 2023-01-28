@@ -211,7 +211,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
        y = 'Category')
 ```
 
-![Figure 1](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjoPSdhi5TNSPlE5pNhecfMt-IsXctYXpuZRY-9EVQ08mcXI-5LFcILawvARd1gI55_iGzkuHt9TBtbOsSibQvWsxaLaKYfUkUOWCb8lL93q99cXs-yrUxyahiMjcZEUlRzvbrLkwaiUFutk1x3QljoN3yfQn9ctYnE27M4ii2ydCfvJhmJNnGN5ft/w640-h458/p01_trending-category-total-views.png)
+![Figure 1](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjoPSdhi5TNSPlE5pNhecfMt-IsXctYXpuZRY-9EVQ08mcXI-5LFcILawvARd1gI55_iGzkuHt9TBtbOsSibQvWsxaLaKYfUkUOWCb8lL93q99cXs-yrUxyahiMjcZEUlRzvbrLkwaiUFutk1x3QljoN3yfQn9ctYnE27M4ii2ydCfvJhmJNnGN5ft/s16000/p01_trending-category-total-views.png)
 
 Entertainment & Gaming videos became popular from 2021. They both on
 trending most frequent and also have higher total views. Note that
@@ -230,7 +230,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
        y = 'Category')
 ```
 
-![Figure 2](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfNVMMf0w9WoK1VX74bYlI-KqAefHwF5z2RJLoQUYtjVtC1FU3xNF6eE8P4qumAyfZZsSyeSItMGpGo_eA_nrHmLjVfJ5tfJOKNG9jWCqRWL8J7ZLLbUpvFOUvPLEO0Mnfzfk8z0i1hsbVy8m8D2aILd4GW7SssJMERKvooqrvHoQ_4M3jBP-M8xag/s600/p02_trending-category-avg-views.png)
+![Figure 2](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfNVMMf0w9WoK1VX74bYlI-KqAefHwF5z2RJLoQUYtjVtC1FU3xNF6eE8P4qumAyfZZsSyeSItMGpGo_eA_nrHmLjVfJ5tfJOKNG9jWCqRWL8J7ZLLbUpvFOUvPLEO0Mnfzfk8z0i1hsbVy8m8D2aILd4GW7SssJMERKvooqrvHoQ_4M3jBP-M8xag/s16000/p02_trending-category-avg-views.png)
 
 If look at average views per trending time, music still has higher or
 comparable total views to Entertainment and Gaming.
@@ -266,7 +266,7 @@ ggplot(US_channel_200trending, aes(y = channelTitle, x = chtrending_n, fill = ch
        y = 'YouTube Channels')
 ```
 
-![Figure 3](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEire_8nsLJlaRaKc9zKoIo1bNmUR-aiIisfJbtUhRid2hKByNW-j8OB2LBECgKHAw-DiijIueeRAe52f6fIzwgrkdAM2Q4lWLz1TfnePTH8BvKD8YtOlo-T-k3__CKVwraX-pj7-KnDDYxCT_vYMD2Vaa0C49Yo9Fyrl9nY-KiWf-jg4vEuqjHR8KFQ/w640-h458/p03_trending-channels.png)<!-- -->
+![Figure 3](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEire_8nsLJlaRaKc9zKoIo1bNmUR-aiIisfJbtUhRid2hKByNW-j8OB2LBECgKHAw-DiijIueeRAe52f6fIzwgrkdAM2Q4lWLz1TfnePTH8BvKD8YtOlo-T-k3__CKVwraX-pj7-KnDDYxCT_vYMD2Vaa0C49Yo9Fyrl9nY-KiWf-jg4vEuqjHR8KFQ/s16000/p03_trending-channels.png)<!-- -->
 
 Sports channels are on trending most frequent from 2020 to 2022.
 
@@ -362,7 +362,7 @@ ggplot(US_category_views, aes(y = category, x = n_cat_views, fill = avg_views)) 
        y = 'YouTube Category')
 ```
 
-![Figure 4](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1BMSoLD8ChMnGJbB8PQDadwRLQ3wmKVo3Zh6qw59ouyQGftloKbr6tl5VASYU4f3-tjR906EyvGX1IASt8l_R8t9jIU20qCXK8D_v7QLIrqLpkn_I-g8Daz_voDeStHDHpmQDCicWZzzJ8R4StvLrlDxlIBb4vSzDhyV4bhzv3BLA5wLmuGgg2Lj7/s600/p04_trending-categoyr-top100.png)<!-- -->
+![Figure 4](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1BMSoLD8ChMnGJbB8PQDadwRLQ3wmKVo3Zh6qw59ouyQGftloKbr6tl5VASYU4f3-tjR906EyvGX1IASt8l_R8t9jIU20qCXK8D_v7QLIrqLpkn_I-g8Daz_voDeStHDHpmQDCicWZzzJ8R4StvLrlDxlIBb4vSzDhyV4bhzv3BLA5wLmuGgg2Lj7/w640-h458/p04_trending-categoyr-top100.png)<!-- -->
 
 In 2020, most popular videos are music, then shift to Entertainmen in
 2021. Two most popular categories in 2022 are News and music.
