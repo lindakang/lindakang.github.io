@@ -362,7 +362,7 @@ ggplot(US_category_views, aes(y = category, x = n_cat_views, fill = avg_views)) 
        y = 'YouTube Category')
 ```
 
-![Figure 4](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1BMSoLD8ChMnGJbB8PQDadwRLQ3wmKVo3Zh6qw59ouyQGftloKbr6tl5VASYU4f3-tjR906EyvGX1IASt8l_R8t9jIU20qCXK8D_v7QLIrqLpkn_I-g8Daz_voDeStHDHpmQDCicWZzzJ8R4StvLrlDxlIBb4vSzDhyV4bhzv3BLA5wLmuGgg2Lj7/w640-h458/p04_trending-categoyr-top100.png)<!-- -->
+![Figure 4](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1BMSoLD8ChMnGJbB8PQDadwRLQ3wmKVo3Zh6qw59ouyQGftloKbr6tl5VASYU4f3-tjR906EyvGX1IASt8l_R8t9jIU20qCXK8D_v7QLIrqLpkn_I-g8Daz_voDeStHDHpmQDCicWZzzJ8R4StvLrlDxlIBb4vSzDhyV4bhzv3BLA5wLmuGgg2Lj7/s16000/p04_trending-categoyr-top100.png)<!-- -->
 
 In 2020, most popular videos are music, then shift to Entertainmen in
 2021. Two most popular categories in 2022 are News and music.
@@ -377,7 +377,7 @@ ggplot(US_channel_top100, aes(y = channelTitle, x = view_count, alpha = likes)) 
        y = 'YouTube Channels')
 ```
 
-![Figure 5](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoam5vKRKTVtqqpofzAoQTr8BmFm25k76MvSMPTnLqnE1OCM49s7N2Fs09FgwgO_55b_QmkS61ILDysx5HbQuG-9zP7zJocl8_WV56b6yIvycJKeoJ406S9CSbrPsgXTdjGN6t20aR-N-1B9FMwFcj_79bJ0NcF4sgvGRH8ze0dnH6KBbVbZRrX4_E/s600/p05_trending-channels-top100.png)<!-- -->
+![Figure 5](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoam5vKRKTVtqqpofzAoQTr8BmFm25k76MvSMPTnLqnE1OCM49s7N2Fs09FgwgO_55b_QmkS61ILDysx5HbQuG-9zP7zJocl8_WV56b6yIvycJKeoJ406S9CSbrPsgXTdjGN6t20aR-N-1B9FMwFcj_79bJ0NcF4sgvGRH8ze0dnH6KBbVbZRrX4_E/s16000/p05_trending-channels-top100.png)<!-- -->
 
 Black Pink has the highest views.
 
@@ -398,7 +398,7 @@ ggplot(US_channel_top100, aes(y = title, x = view_count, alpha = likes)) +
        y = 'YouTube videos')
 ```
 
-![Figure 6](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNnnvS4wezlkZRjXevoSK6oNmaArfkyzzlrIUivP5owv1WfdzSnv_PT0Dzi3PabScyP3vRlWyy_hwueyAICAobIRa3w2P_2FaGMwrR1Oo0pQ-HQh1p6hiiBZ3Bz7_nZgbimOj8Od0QrUoUZ8DcGSMwfNVy9KAFSx0Nro8Fy8v5X33-W5fdqfEdBjH_/s600/p06_top100-viewed-videos.png)<!-- -->
+![Figure 6](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNnnvS4wezlkZRjXevoSK6oNmaArfkyzzlrIUivP5owv1WfdzSnv_PT0Dzi3PabScyP3vRlWyy_hwueyAICAobIRa3w2P_2FaGMwrR1Oo0pQ-HQh1p6hiiBZ3Bz7_nZgbimOj8Od0QrUoUZ8DcGSMwfNVy9KAFSx0Nro8Fy8v5X33-W5fdqfEdBjH_/s16000/p06_top100-viewed-videos.png)<!-- -->
 
 4 / 15 videos of highest views are BTS, Black Pink and shorts.
 
@@ -432,7 +432,7 @@ ggplot(USchannel_pay, aes(y = channelTitle, x = USD_pay_in_k, fill = view_sum)) 
        y = 'Category')
 ```
 
-![Figure 7](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpifci6boj5s04oP9QMwd17-PDqQwjwSOcDmA7Vcw-vc45Cu5ubZgKPglN81K-aky-qusnreXkUlNssHnsdgusjfS-FuIdbCR_C78S0xJdI1mvUj3xDiU7F0n8Xu8f7aC_9tAaCSbFFMu77yIam-7FFasKC7o5BBEBkWM00pf6Cw8zxZBDIBAAOspL/s600/p07_top20-paid.png)<!-- -->
+![Figure 7](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpifci6boj5s04oP9QMwd17-PDqQwjwSOcDmA7Vcw-vc45Cu5ubZgKPglN81K-aky-qusnreXkUlNssHnsdgusjfS-FuIdbCR_C78S0xJdI1mvUj3xDiU7F0n8Xu8f7aC_9tAaCSbFFMu77yIam-7FFasKC7o5BBEBkWM00pf6Cw8zxZBDIBAAOspL/s16000/p07_top20-paid.png)<!-- -->
 
 MrBeast earns lots of money!
 
@@ -493,7 +493,7 @@ ggplot(US_personal_trending, aes(y = category, x = n_personal_trending, fill = a
        fill = "Average views")
 ```
 
-![Figure 8](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5pODxsn9nURTi5yiB9ggUkX4EBwEG5Z9RObuhE0Yy533lNcQEjQLHe4GhA4FAf1fVheleiYSw_D4LMqe09vzflGvKCDf2GUMcxyRzwGGq8zVuC0ZbpTYWeNMszra8dWwFCL3VqEGwjPTEwjF5Uira1Gfud5btP-fowxBdmsTLZm6n7MXuxPq2qY05/s600/p08_ex-trending-category-avg-views.png)<!-- -->
+![Figure 8](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5pODxsn9nURTi5yiB9ggUkX4EBwEG5Z9RObuhE0Yy533lNcQEjQLHe4GhA4FAf1fVheleiYSw_D4LMqe09vzflGvKCDf2GUMcxyRzwGGq8zVuC0ZbpTYWeNMszra8dWwFCL3VqEGwjPTEwjF5Uira1Gfud5btP-fowxBdmsTLZm6n7MXuxPq2qY05/s16000/p08_ex-trending-category-avg-views.png)<!-- -->
 
 Gaming and Entertainment (personal, not commercial) became very popular
 since 2021.
@@ -534,7 +534,7 @@ ggplot(US_personal_top100_bycat, aes(y = category, x = n_per_cat_views, fill = a
        fill = "Average views")
 ```
 
-![Figure 9](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiqPigNUTs8HhUagbw-3OoRHTCr2IjJjRrsdoQRal1zRjv-uax36PGjnTZ8xdTjGQ5lZ5KeZo3vTRUuYM-WQNYzEnc1I4aRMN5Bikpg4a_0ZXEJNscuittvbWAO-S0mBdOTvtxkSudppwKpkeadLUb1hYgZV7x_JRyBDbA7RC5MZlbzHRu2nHOyu5N/s600/p09_ex-category-top100-views.png)<!-- -->
+![Figure 9](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiqPigNUTs8HhUagbw-3OoRHTCr2IjJjRrsdoQRal1zRjv-uax36PGjnTZ8xdTjGQ5lZ5KeZo3vTRUuYM-WQNYzEnc1I4aRMN5Bikpg4a_0ZXEJNscuittvbWAO-S0mBdOTvtxkSudppwKpkeadLUb1hYgZV7x_JRyBDbA7RC5MZlbzHRu2nHOyu5N/s16000/p09_ex-category-top100-views.png)<!-- -->
 
 Entertainment is the one with highest views from 2020 to 2022.
 
@@ -559,7 +559,7 @@ ggplot(US_nocomm_top100views, aes(y = channelTitle, x = view_count, alpha = like
        color = "Trending year")
 ```
 
-![Figure 10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc1ez3ghu_pvC-f6Ztk8tpw3_2wBmlmAt7fKArCZbLoa5Tsf5HR5DB2FO8LzEyicKGUvdSIY97GthqmSAirws9TW197FmrXChpP82w2ipuXVdTExWngQDlkyvRT_SJDx5JJkxvpzAImbFSLwuCF-YuzeeMd0C_DXs97PebAxoWlVB_ZyZFx1YsNMji/s600/p10_ex-trending-channels-top100views.png)<!-- -->
+![Figure 10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc1ez3ghu_pvC-f6Ztk8tpw3_2wBmlmAt7fKArCZbLoa5Tsf5HR5DB2FO8LzEyicKGUvdSIY97GthqmSAirws9TW197FmrXChpP82w2ipuXVdTExWngQDlkyvRT_SJDx5JJkxvpzAImbFSLwuCF-YuzeeMd0C_DXs97PebAxoWlVB_ZyZFx1YsNMji/s16000/p10_ex-trending-channels-top100views.png)<!-- -->
 
 MrBeast has the highest views in 2021
 
@@ -578,7 +578,7 @@ ggplot(US_nocomm_top100views, aes(y = channelTitle, x = view_count, alpha = like
        color = "Trending year")
 ```
 
-![Figure 11](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-IrtJwSizWj4mGf7sXJnGy13EuQLQHV1stfS9baXBFs6MFUJY1nY-NWyZPCGUDX0NJy9jpD4cCq0HawGa14TCE3VavSSRLJLcv85BUACfAJsY6fOSugxmXjdxeYw7ix1GlwD7BWzsm1CwBu7wu_C_qpqXUgl3uI63-S-xLdDoZs6gH0rHShmXisHx/s600/p11_ex-channels-top100views.png)<!-- -->
+![Figure 11](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-IrtJwSizWj4mGf7sXJnGy13EuQLQHV1stfS9baXBFs6MFUJY1nY-NWyZPCGUDX0NJy9jpD4cCq0HawGa14TCE3VavSSRLJLcv85BUACfAJsY6fOSugxmXjdxeYw7ix1GlwD7BWzsm1CwBu7wu_C_qpqXUgl3uI63-S-xLdDoZs6gH0rHShmXisHx/s16000/p11_ex-channels-top100views.png)<!-- -->
 
 #### 3-2-3. Paid by ad views
 
@@ -603,4 +603,4 @@ ggplot(US_personal_paytop20, aes(y = channelTitle, x = personal_pay_in_k, fill =
        fill = "Views")
 ```
 
-![Figure 12](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh55Kp474-Yld16g3rHxr_k3QvanRAt58bNcnCBFTbokd7hlq7YZDKONTZ9tMJarlScrgXgwxdfcHO0lQBK1bxWXykKwRtxFxhcVv6wfA1qREw3HVbq46dh6ZYRUMoCqg7m-To9aueQcwH_pVlmzdXKPMIubkOFui5A__qw_UvVgPJ9DjBnf8gablG/s600/p12_ex-top20-paid.png)<!-- -->
+![Figure 12](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh55Kp474-Yld16g3rHxr_k3QvanRAt58bNcnCBFTbokd7hlq7YZDKONTZ9tMJarlScrgXgwxdfcHO0lQBK1bxWXykKwRtxFxhcVv6wfA1qREw3HVbq46dh6ZYRUMoCqg7m-To9aueQcwH_pVlmzdXKPMIubkOFui5A__qw_UvVgPJ9DjBnf8gablG/s16000/p12_ex-top20-paid.png)<!-- -->
