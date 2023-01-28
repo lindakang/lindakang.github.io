@@ -21,13 +21,13 @@ daily)](https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset)
 List of YouTube videos that have been on daily trending list from
 2020-08-12 to 2022-10-02.
 
+![YouTube logo from Wiki](https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg)
+
 ### Want to know:
 
 1.  Channels & videos that on trending (top 50 \# of days on trending)
 2.  Channels & videos with most views (top 100)
 3.  Paid from views (top 20)
-
-![YouTube logo from Wiki](https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg)
 
 ### YouTube Channel category
 
