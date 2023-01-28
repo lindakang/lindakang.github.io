@@ -230,7 +230,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
        y = 'Category')
 ```
 
-![](2022-10-16-YT-US-trending_files/figure-gfm/p02_trending-category-avg-views-1.png)<!-- -->
+![](2022-10-16-YT-US-trending_files/figure-gfm/p02_trending-category-avg-views-1.png)
 
 If look at average views per trending time, music still has higher or
 comparable total views to Entertainment and Gaming.
