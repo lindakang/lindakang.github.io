@@ -83,7 +83,7 @@ library(lubridate)
 1-2. Import datasets
 
 ``` r
-US <- read_csv("/Users/Linda/Desktop/RStudio/Kaggle/YouTube/US_youtube_trending_data.csv")
+US <- read_csv("../input/youtube-trending-video-dataset/US_youtube_trending_data.csv")
 ```
 
     ## Warning: One or more parsing issues, see `problems()` for details
