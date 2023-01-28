@@ -230,7 +230,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
        y = 'Category')
 ```
 
-![](2022-10-16-YT-US-trending_files/figure-gfm/p02_trending-category-avg-views-1.png)
+![Figure 2](https://get.google.com/u/1/albumarchive/115310499882930821728/album/AF1QipOdXPuMoKUe2kqWt4pU2qKJvet0m0nqM1rLWcU7/AF1QipNSAd4CZqgpaqGYnFrztGIYNctM9TwAJYLRgN6e?hl=zh_TW&authKey=CPSbjtu3su--FQ)
 
 If look at average views per trending time, music still has higher or
 comparable total views to Entertainment and Gaming.
@@ -266,7 +266,7 @@ ggplot(US_channel_200trending, aes(y = channelTitle, x = chtrending_n, fill = ch
        y = 'YouTube Channels')
 ```
 
-![](2022-10-16-YT-US-trending_files/figure-gfm/p03_trending-channels-1.png)<!-- -->
+![Figure 3](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEire_8nsLJlaRaKc9zKoIo1bNmUR-aiIisfJbtUhRid2hKByNW-j8OB2LBECgKHAw-DiijIueeRAe52f6fIzwgrkdAM2Q4lWLz1TfnePTH8BvKD8YtOlo-T-k3__CKVwraX-pj7-KnDDYxCT_vYMD2Vaa0C49Yo9Fyrl9nY-KiWf-jg4vEuqjHR8KFQ/w640-h458/p03_trending-channels.png)<!-- -->
 
 Sports channels are on trending most frequent from 2020 to 2022.
 
