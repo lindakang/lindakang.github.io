@@ -211,7 +211,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
        y = 'Category')
 ```
 
-![Figure 1](images/20221016/p01_trending-category-total-views-1.png)
+![Figure 1](lindakang.github.io/images/20221016/p01_trending-category-total-views-1.png)
 
 Entertainment & Gaming videos became popular from 2021. They both on
 trending most frequent and also have higher total views. Note that
