@@ -1,9 +1,5 @@
----
-layout: post
-title: YouTube trending video data (1) - US
-tags: kaggle, data analysis
-categories: data
----
+YouTube trending video data (1) - US
+================
 
 ## US, Canada & Japan
 
@@ -83,12 +79,12 @@ library(lubridate)
 1-2. Import datasets
 
 ``` r
-US <- read_csv("../input/youtube-trending-video-dataset/US_youtube_trending_data.csv")
+US <- read_csv("/Users/Linda/Desktop/RStudio/Kaggle/YouTube/US_youtube_trending_data.csv")
 ```
 
     ## Warning: One or more parsing issues, see `problems()` for details
 
-    ## Rows: 157190 Columns: 16
+    ## Rows: 180590 Columns: 16
     ## ── Column specification ────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr  (7): video_id, title, channelId, channelTitle, tags, thumbnail_link, de...
@@ -147,7 +143,7 @@ US_data <- US_data %>%
 glimpse(US_data)
 ```
 
-    ## Rows: 157,107
+    ## Rows: 180,507
     ## Columns: 11
     ## $ title         <chr> "I ASKED HER TO BE MY GIRLFRIEND...", "Apex Legends | St…
     ## $ channelTitle  <chr> "Brawadis", "Apex Legends", "jacksepticeye", "XXL", "Mr.…
@@ -211,7 +207,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
        y = 'Category')
 ```
 
-![Figure 1](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjoPSdhi5TNSPlE5pNhecfMt-IsXctYXpuZRY-9EVQ08mcXI-5LFcILawvARd1gI55_iGzkuHt9TBtbOsSibQvWsxaLaKYfUkUOWCb8lL93q99cXs-yrUxyahiMjcZEUlRzvbrLkwaiUFutk1x3QljoN3yfQn9ctYnE27M4ii2ydCfvJhmJNnGN5ft/s16000/p01_trending-category-total-views.png)
+![Figure 1](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjoPSdhi5TNSPlE5pNhecfMt-IsXctYXpuZRY-9EVQ08mcXI-5LFcILawvARd1gI55_iGzkuHt9TBtbOsSibQvWsxaLaKYfUkUOWCb8lL93q99cXs-yrUxyahiMjcZEUlRzvbrLkwaiUFutk1x3QljoN3yfQn9ctYnE27M4ii2ydCfvJhmJNnGN5ft/s16000/p01_trending-category-total-views.png)<!-- -->
 
 Entertainment & Gaming videos became popular from 2021. They both on
 trending most frequent and also have higher total views. Note that
@@ -230,7 +226,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
        y = 'Category')
 ```
 
-![Figure 2](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfNVMMf0w9WoK1VX74bYlI-KqAefHwF5z2RJLoQUYtjVtC1FU3xNF6eE8P4qumAyfZZsSyeSItMGpGo_eA_nrHmLjVfJ5tfJOKNG9jWCqRWL8J7ZLLbUpvFOUvPLEO0Mnfzfk8z0i1hsbVy8m8D2aILd4GW7SssJMERKvooqrvHoQ_4M3jBP-M8xag/s16000/p02_trending-category-avg-views.png)
+![Figure 2](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfNVMMf0w9WoK1VX74bYlI-KqAefHwF5z2RJLoQUYtjVtC1FU3xNF6eE8P4qumAyfZZsSyeSItMGpGo_eA_nrHmLjVfJ5tfJOKNG9jWCqRWL8J7ZLLbUpvFOUvPLEO0Mnfzfk8z0i1hsbVy8m8D2aILd4GW7SssJMERKvooqrvHoQ_4M3jBP-M8xag/s16000/p02_trending-category-avg-views.png)<!-- -->
 
 If look at average views per trending time, music still has higher or
 comparable total views to Entertainment and Gaming.
@@ -297,26 +293,26 @@ US_video_30trending
     ## 2                                              Most Oddly Satisfying Video to watch before sleep
     ## 3                                                                                    we broke up
     ## 4                                                            Turn into orbeez - Tutorial #Shorts
-    ## 5    Floyd Mayweather vs Logan Paul: Fight goes the distance [Highlights, recap] | CBS Sports HQ
-    ## 6                                        Israeli Iron Dome filmed intercepting rockets from Gaza
-    ## 7       Golden Buzzer: 9-Year-Old Victory Brinker Makes AGT HISTORY! - America's Got Talent 2021
-    ## 8   India claim stunning series win, end Australia's Gabba streak | Vodafone Test Series 2020-21
-    ## 9  Watch the uncensored moment Will Smith smacks Chris Rock on stage at the Oscars, drops F-bomb
-    ## 10                          The Witch TERRIFIES Simon Cowell to the CORE! | Auditions | BGT 2022
-    ## 11                                                              Creative People On Another Level
+    ## 5                                                               Creative People On Another Level
+    ## 6    Floyd Mayweather vs Logan Paul: Fight goes the distance [Highlights, recap] | CBS Sports HQ
+    ## 7                                        Israeli Iron Dome filmed intercepting rockets from Gaza
+    ## 8       Golden Buzzer: 9-Year-Old Victory Brinker Makes AGT HISTORY! - America's Got Talent 2021
+    ## 9   India claim stunning series win, end Australia's Gabba streak | Vodafone Test Series 2020-21
+    ## 10 Watch the uncensored moment Will Smith smacks Chris Rock on stage at the Oscars, drops F-bomb
+    ## 11                          The Witch TERRIFIES Simon Cowell to the CORE! | Auditions | BGT 2022
     ## 12              Highlights: Manchester United 0-5 Liverpool | Salah hat-trick stuns Old Trafford
     ##    vtrending_n video_views_sum      category         channelTitle
-    ## 1          169       119401970       Science               SpaceX
+    ## 1          187       127261126       Science               SpaceX
     ## 2           50       246738894 Entertainment         SSSniperWolf
-    ## 3           39        63855149 Entertainment       Paulina Torres
+    ## 3           45        65507291 Entertainment    Maddie and Elijah
     ## 4           36      5640301234 Entertainment               FFUNTV
-    ## 5           35       554989292        Sports        CBS Sports HQ
-    ## 6           34       789779224          News        The Telegraph
-    ## 7           33       299493829 Entertainment America's Got Talent
-    ## 8           33      1162813591        Sports       cricket.com.au
-    ## 9           33      3109852918          News        Guardian News
-    ## 10          32       504955736 Entertainment Britain's Got Talent
-    ## 11          31       146415814 Entertainment         SSSniperWolf
+    ## 5           35       157562717 Entertainment         SSSniperWolf
+    ## 6           35       554989292        Sports        CBS Sports HQ
+    ## 7           34       789779224          News        The Telegraph
+    ## 8           33       299493829 Entertainment America's Got Talent
+    ## 9           33      1162813591        Sports       cricket.com.au
+    ## 10          33      3109852918          News        Guardian News
+    ## 11          32       504955736 Entertainment Britain's Got Talent
     ## 12          31       367867655        Sports         Liverpool FC
 
 SpaceX’s Starlink Mission was on trending for almost half an year.
@@ -505,13 +501,41 @@ What are the categories with most highest views?
 ``` r
 # Personal videos of top 100 videos of each year
 # total = 300 videos
-US_personal_cattop100 <- US_nocomm %>%
+US_nocomm_top100year_view <- US_nocomm %>%
   group_by(trending_year) %>%
   arrange(desc(view_count)) %>%
   slice(1:100)
 
-# Category of highest views
-US_personal_top100_bycat <- US_personal_cattop100 %>%
+# No. days on trending
+USnocomm_top100_view_ntrending <- US_nocomm_top100year_view %>%
+  group_by(title) %>%
+  summarise(channelTitle = first(channelTitle),
+            v_ntrending = n(),
+            sum_view = sum(view_count)) %>%
+  arrange(desc(v_ntrending))
+
+USnocomm_top100_view_ntrending
+```
+
+    ## # A tibble: 97 × 4
+    ##    title                                                 chann…¹ v_ntr…² sum_v…³
+    ##    <chr>                                                 <chr>     <int>   <dbl>
+    ##  1 I Built Willy Wonka's Chocolate Factory!              MrBeast      14  8.15e8
+    ##  2 I Survived 50 Hours In Antarctica                     MrBeast      11  6.68e8
+    ##  3 Jhoome Jo Pathaan Song | Shah Rukh Khan, Deepika | V… YRF          10  6.11e8
+    ##  4 Galaxy Unpacked January 2021: Official Replay l Sams… Samsung       9  3.04e8
+    ##  5 I Opened A Restaurant That Pays You To Eat At It      MrBeast       9  2.63e8
+    ##  6 so long nerds                                         Techno…       9  5.20e8
+    ##  7 SHAKIRA || BZRP Music Sessions #53                    Bizarr…       8  9.72e8
+    ##  8 100 Kids Vs 100 Adults For $500,000                   MrBeast       7  3.69e8
+    ##  9 AMONG US, but with 99 IMPOSTORS                       The Pi…       7  3.93e8
+    ## 10 I Gave My 100,000,000th Subscriber An Island          MrBeast       7  3.30e8
+    ## # … with 87 more rows, and abbreviated variable names ¹​channelTitle,
+    ## #   ²​v_ntrending, ³​sum_view
+
+``` r
+# Fig 09 - Category of highest views
+US_nocomm_top100catyear <- US_nocomm %>%
   group_by(category, trending_year) %>%
   summarise(n_per_cat_views = n(),
             avg_percat_views = sum(view_count) / n_per_cat_views) %>%
@@ -522,16 +546,15 @@ US_personal_top100_bycat <- US_personal_cattop100 %>%
     ## `.groups` argument.
 
 ``` r
-ggplot(US_personal_top100_bycat, aes(y = category, x = n_per_cat_views, fill = avg_percat_views)) +
+ggplot(US_nocomm_top100catyear, aes(y = category, x = n_per_cat_views, fill = avg_percat_views)) +
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
-  labs(title = 'No. times of trending of US YouTube videos with top 100 higest views',
+  labs(title = 'No. times of trending of US YouTube categories with top 100 higest views',
        subtitle = 'Film, music, TV channels, commercials, shorts are excluded',
        x = 'No. times on Trending',
-       y = 'Category',
-       fill = "Average views")
+       y = 'Category')
 ```
 
 ![Figure 9](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiqPigNUTs8HhUagbw-3OoRHTCr2IjJjRrsdoQRal1zRjv-uax36PGjnTZ8xdTjGQ5lZ5KeZo3vTRUuYM-WQNYzEnc1I4aRMN5Bikpg4a_0ZXEJNscuittvbWAO-S0mBdOTvtxkSudppwKpkeadLUb1hYgZV7x_JRyBDbA7RC5MZlbzHRu2nHOyu5N/s16000/p09_ex-category-top100-views.png)<!-- -->
@@ -547,16 +570,37 @@ US_nocomm_top100views <- US_nocomm %>%
   arrange(desc(view_count)) %>%
   slice(1:100)
 
-# Channels of top 100 views videos
+US_nocomm_top100views
+```
+
+    ## # A tibble: 100 × 11
+    ##    title chann…¹ categ…² trending…³ tags  view_…⁴  likes disli…⁵ comme…⁶ categ…⁷
+    ##    <chr> <chr>     <dbl> <date>     <chr>   <dbl>  <dbl>   <dbl>   <dbl> <fct>  
+    ##  1 SHAK… Bizarr…      24 2023-01-20 biza…  1.58e8 8.33e6       0  468245 Entert…
+    ##  2 SHAK… Bizarr…      24 2023-01-19 biza…  1.51e8 8.17e6       0  460932 Entert…
+    ##  3 SHAK… Bizarr…      24 2023-01-18 biza…  1.43e8 7.98e6       0  452536 Entert…
+    ##  4 $456… MrBeast      24 2021-12-02 [Non…  1.37e8 1.09e7   67027  527142 Entert…
+    ##  5 SHAK… Bizarr…      24 2023-01-17 biza…  1.33e8 7.75e6       0  441937 Entert…
+    ##  6 $456… MrBeast      24 2021-12-01 [Non…  1.31e8 1.07e7   62462  516253 Entert…
+    ##  7 SHAK… Bizarr…      24 2023-01-16 biza…  1.23e8 7.45e6       0  427387 Entert…
+    ##  8 $456… MrBeast      24 2021-11-30 [Non…  1.22e8 1.03e7   56591  501543 Entert…
+    ##  9 $456… MrBeast      24 2021-11-29 [Non…  1.11e8 9.69e6   49633  480744 Entert…
+    ## 10 SHAK… Bizarr…      24 2023-01-15 biza…  1.10e8 7.03e6       0  410399 Entert…
+    ## # … with 90 more rows, 1 more variable: trending_year <chr>, and abbreviated
+    ## #   variable names ¹​channelTitle, ²​categoryId, ³​trending_date, ⁴​view_count,
+    ## #   ⁵​dislikes, ⁶​comment_count, ⁷​category
+
+``` r
+# Fig 10 - Channels of top 100 views videos
+# exclude shorts & commercials
 ggplot(US_nocomm_top100views, aes(y = channelTitle, x = view_count, alpha = likes, color = trending_year)) +
   geom_point() +
   facet_grid(.~trending_year) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
-  labs(title = 'Top 100 US YouTube videos with higest views',
-       subtitle = 'Film, music, TV channels, commercials, shorts are excluded',
+  labs(title = 'Top 100 US YouTube channels with higest views',
+       subtitle = 'Film, music, TV channels, autos are excluded',
        x = '# of views',
-       y = 'YouTube channels',
-       color = "Trending year")
+       y = 'YouTube channels')
 ```
 
 ![Figure 10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc1ez3ghu_pvC-f6Ztk8tpw3_2wBmlmAt7fKArCZbLoa5Tsf5HR5DB2FO8LzEyicKGUvdSIY97GthqmSAirws9TW197FmrXChpP82w2ipuXVdTExWngQDlkyvRT_SJDx5JJkxvpzAImbFSLwuCF-YuzeeMd0C_DXs97PebAxoWlVB_ZyZFx1YsNMji/s16000/p10_ex-trending-channels-top100views.png)<!-- -->
@@ -566,19 +610,26 @@ MrBeast has the highest views in 2021
 What are the vidoes with highest views?
 
 ``` r
-# Videos of top 100 highest views (3 years together)
+# Fig 11 -  Videos of top 50 highest views (separated by year)
 # exclude shorts & commercials
-ggplot(US_nocomm_top100views, aes(y = channelTitle, x = view_count, alpha = likes, color = trending_year)) +
-  geom_point() +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
-  labs(title = 'Top 100 US YouTube videos with higest views',
+US_top50_view_year <- US_nocomm %>%
+  group_by(trending_year) %>%
+  arrange(desc(view_count)) %>%
+  slice(1:50)
+
+ggplot(US_top50_view_year, aes(y = channelTitle, x = view_count, alpha = view_count)) +
+  geom_point(color = "blue") +
+  facet_grid(. ~trending_year) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme_linedraw(base_family = "NanumGothic") +
+  labs(title = 'Top 50 US YouTube channels with higest views of each year',
        subtitle = 'Film, music, TV channels, commercials, shorts are excluded',
        x = '# of views',
        y = 'YouTube channels',
-       color = "Trending year")
+       alpha = "Views")
 ```
 
-![Figure 11](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-IrtJwSizWj4mGf7sXJnGy13EuQLQHV1stfS9baXBFs6MFUJY1nY-NWyZPCGUDX0NJy9jpD4cCq0HawGa14TCE3VavSSRLJLcv85BUACfAJsY6fOSugxmXjdxeYw7ix1GlwD7BWzsm1CwBu7wu_C_qpqXUgl3uI63-S-xLdDoZs6gH0rHShmXisHx/s16000/p11_ex-channels-top100views.png)<!-- -->
+![Figure 11](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvzuyBi5fztfK4zujCD6FMJ9w1TZ1CNzZoS6Nx2WfFEBRGjzT96709op_ccTcB9ZlZdjn__frtyWxVxLK4m-U21G_rl632ybLforhzZMPtlygPSgpCislUbk1nGrrpiYH1j3PmnN8ZEuKEIHirXaOc_9i0nkyOnkfUK8uSqyJHyPhvFyTfeKWlKhlE/s16000/p11_ex-channels-top100views.png)<!-- -->
 
 #### 3-2-3. Paid by ad views
 
@@ -603,4 +654,4 @@ ggplot(US_personal_paytop20, aes(y = channelTitle, x = personal_pay_in_k, fill =
        fill = "Views")
 ```
 
-![Figure 12](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh55Kp474-Yld16g3rHxr_k3QvanRAt58bNcnCBFTbokd7hlq7YZDKONTZ9tMJarlScrgXgwxdfcHO0lQBK1bxWXykKwRtxFxhcVv6wfA1qREw3HVbq46dh6ZYRUMoCqg7m-To9aueQcwH_pVlmzdXKPMIubkOFui5A__qw_UvVgPJ9DjBnf8gablG/s16000/p12_ex-top20-paid.png)<!-- -->
+![Figure 12](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh55Kp474-Yld16g3rHxr_k3QvanRAt58bNcnCBFTbokd7hlq7YZDKONTZ9tMJarlScrgXgwxdfcHO0lQBK1bxWXykKwRtxFxhcVv6wfA1qREw3HVbq46dh6ZYRUMoCqg7m-To9aueQcwH_pVlmzdXKPMIubkOFui5A__qw_UvVgPJ9DjBnf8gablG/s1600/p12_ex-top20-paid.png)<!-- -->
