@@ -351,7 +351,7 @@ US_category_views <- US_channel_top100_year %>%
     ## `.groups` argument.
 
 ``` r
-# Top 100 views videos are Music and Entertainment
+# Fig 04 - Top 100 views videos are Music and Entertainment
 ggplot(US_category_views, aes(y = category, x = n_cat_views, fill = avg_views)) +
   geom_col() +
   facet_grid(. ~trending_year) +
@@ -368,11 +368,12 @@ In 2020, most popular videos are music, then shift to Entertainmen in
 2021. Two most popular categories in 2022 are News and music.
 
 ``` r
-# Channels with videos of top 100 views: Higher views do not correlate with more likes
+# Fig 05 - Channels with videos of top 100 views: Higher views do not correlate with more likes
 ggplot(US_channel_top100, aes(y = channelTitle, x = view_count, alpha = likes)) +
   geom_point(color = "blue") +
+  facet_grid(. ~trending_year) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
-  labs(title = 'US YouTube Channels with higest top 100 views',
+  labs(title = 'US YouTube Channels with top 100 higest views',
        x = '# of viewss',
        y = 'YouTube Channels')
 ```
@@ -387,7 +388,7 @@ Big Hit Labels is the former name of HYBE LABELS, which is the company
 that BTS is belonged to.
 
 ``` r
-# Top 100 viewed videos: Higher views do not correlate with more likes
+# Fig 06 - Top 100 viewed videos: Higher views do not correlate with more likes
 ggplot(US_channel_top100, aes(y = title, x = view_count, alpha = likes)) +
   geom_point(color = "blue") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
@@ -415,7 +416,7 @@ Stats)](https://www.thinkific.com/blog/youtube-money-per-view/)
 
 ``` r
 ## Paid by views of each channel
-# All category
+# Fig 07 - All category
 USchannel_pay <- US_data %>%
   group_by(channelTitle) %>%
   summarise(view_sum = sum(view_count),
