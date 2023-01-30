@@ -378,7 +378,7 @@ ggplot(US_channel_top100, aes(y = channelTitle, x = view_count, alpha = likes)) 
        y = 'YouTube Channels')
 ```
 
-![Figure 5](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoam5vKRKTVtqqpofzAoQTr8BmFm25k76MvSMPTnLqnE1OCM49s7N2Fs09FgwgO_55b_QmkS61ILDysx5HbQuG-9zP7zJocl8_WV56b6yIvycJKeoJ406S9CSbrPsgXTdjGN6t20aR-N-1B9FMwFcj_79bJ0NcF4sgvGRH8ze0dnH6KBbVbZRrX4_E/s16000/p05_trending-channels-top100.png)<!-- -->
+![Figure 5](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieS0wgeJ_ku8TyWRbzKE30Zf4_gkgmB3HO_SCtu0UniXKRuNz6EjN8OAgc9D_Ir2opc2CGfYBeG96Xh69_9TmTr-XzbgUM38QOp2P-QwmD0s3_eqSZC08uEs5tmsySuB3NKCArWHKvmyeKZ_i1uSbANCXYL1QpGVpYbDOa4KdTD5ibt2OeCa3oHtzp/s1600/p05_trending-channels-top100.png)<!-- -->
 
 Black Pink has the highest views.
 
