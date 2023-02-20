@@ -50,8 +50,8 @@ library(tidyverse)
 
     ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
     ## ✔ ggplot2 3.3.6      ✔ dplyr   1.0.10
-    ## ✔ tibble  3.1.8      ✔ stringr 1.4.1 
-    ## ✔ readr   2.1.2      ✔ forcats 0.5.2 
+    ## ✔ tibble  3.1.8      ✔ stringr 1.4.1
+    ## ✔ readr   2.1.2      ✔ forcats 0.5.2
     ## ✔ purrr   0.3.4      
     ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ## ✖ dplyr::filter() masks stats::filter()
@@ -62,11 +62,11 @@ library(tibble)
 library(dbplyr)
 ```
 
-    ## 
+    ##
     ## Attaching package: 'dbplyr'
-    ## 
+    ##
     ## The following objects are masked from 'package:dplyr':
-    ## 
+    ##
     ##     ident, sql
 
 ``` r
@@ -74,11 +74,11 @@ library(utils)
 library(lubridate)
 ```
 
-    ## 
+    ##
     ## Attaching package: 'lubridate'
-    ## 
+    ##
     ## The following objects are masked from 'package:base':
-    ## 
+    ##
     ##     date, intersect, setdiff, union
 
 1-2. Import datasets
@@ -96,7 +96,7 @@ US <- read_csv("/Users/Linda/Desktop/RStudio/Kaggle/YouTube/US_youtube_trending_
     ## dbl  (5): categoryId, view_count, likes, dislikes, comment_count
     ## lgl  (2): comments_disabled, ratings_disabled
     ## dttm (2): publishedAt, trending_date
-    ## 
+    ##
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 
@@ -133,9 +133,9 @@ trending_date, tags, views, likes, dislikes, comment_count
 US_data <- US %>%
   select(title, channelTitle, categoryId, trending_date, tags, view_count, likes, dislikes, comment_count) %>%
   mutate("category" = as.factor(categoryId)) %>%
-  mutate(category = recode(category, "1" = "Film", "2" = "Autos", "10" = "Music", "15" = "Pets", 
+  mutate(category = recode(category, "1" = "Film", "2" = "Autos", "10" = "Music", "15" = "Pets",
                            "17" = "Sports", "19" = "Travel", "20" = "Gaming", "22" = "Blogs",
-                           "23" = "Comedy", "24" = "Entertainment", "25" = "News", 
+                           "23" = "Comedy", "24" = "Entertainment", "25" = "News",
                            "26" = "HowToD", "27" = "Education", "28" = "Science", "29" = "NPO"))
 
 # convert trending date to the date format
@@ -209,7 +209,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'No. of times on trending of each category (total views)',
        x = '# times on Trending',
        y = 'Category')
@@ -229,7 +229,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'No. times on trending of each category (average views)',
        x = 'No. times on Trending',
        y = 'Category')
@@ -269,7 +269,7 @@ ggplot(US_channel_200trending, aes(y = channelTitle, x = chtrending_n, fill = ch
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'Channels on trending >200 times',
        x = 'No. times on trending',
        y = 'YouTube Channels')
@@ -376,7 +376,7 @@ ggplot(US_category_views, aes(y = category, x = n_cat_views, fill = avg_views)) 
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'Category of videos with top 100 views (2020 - present)',
        x = '# of trending videos in top 100 views',
        y = 'YouTube Category')
@@ -392,7 +392,7 @@ In 2020, most popular videos are music, then shift to Entertainmen in
 ggplot(US_channel_top100, aes(y = channelTitle, x = view_count, alpha = likes)) +
   geom_point(color = "blue") +
   facet_grid(. ~trending_year) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'US YouTube Channels with top 100 highest views',
        x = '# of viewss',
        y = 'YouTube Channels')
@@ -412,7 +412,7 @@ that BTS is belonged to.
 ggplot(US_channel_top100, aes(y = title, x = view_count, alpha = likes)) +
   geom_point(color = "blue") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
-        plot.title = element_text(hjust = -1)) + 
+        plot.title = element_text(hjust = -1)) +
   theme_bw(base_family = "NanumGothic") +
   labs(title = 'Top 100 US YouTube videos with highest views',
        x = '# of views',
@@ -453,7 +453,7 @@ ggplot(USchannel_pay, aes(y = channelTitle, x = USD_pay_in_k, fill = view_sum)) 
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'Amount of top view channel got paid',
        x = 'USD (per 1000 dollars)',
        y = 'Category')
@@ -471,7 +471,7 @@ want to exclude those to see what types of channels give higher views.
 ``` r
 ## Exclude music, films, sports, etc
 # list of commercials to be excluded
-comm_ch_list <- c("HYBE LABELS", "starshipTV", "Stone Music Entertainment", 
+comm_ch_list <- c("HYBE LABELS", "starshipTV", "Stone Music Entertainment",
                   "NPR Music", "Navrattan Music", "Strange Music Inc",
                   "Zee Music Company", "Desi Music Factory", "MTV",
                   "Paramount Pictures", "Warner Bros. Pictures", "Sony Pictures Entertainment",
@@ -512,7 +512,7 @@ ggplot(US_personal_trending, aes(y = category, x = n_personal_trending, fill = a
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'Top 100 US YouTube videos with highest views',
        subtitle = 'Film, music, TV channels, commercials, shorts are excluded',
        x = 'No. of times on Trending',
@@ -581,7 +581,7 @@ ggplot(US_nocomm_top100catyear, aes(y = category, x = n_per_cat_views, fill = av
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'No. times on trending of categories with top 100 highest views',
        subtitle = 'Film, music, TV channels, commercials, shorts are excluded',
        x = 'No. times on Trending',
@@ -627,7 +627,7 @@ US_nocomm_top100views
 ggplot(US_nocomm_top100views, aes(y = channelTitle, x = view_count, alpha = likes, color = trending_year)) +
   geom_point() +
   facet_grid(.~trending_year) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'Top 100 US YouTube channels with highest views',
        subtitle = 'Film, music, TV channels, autos are excluded',
        x = '# of views',
@@ -651,7 +651,7 @@ US_top50_view_year <- US_nocomm %>%
 ggplot(US_top50_view_year, aes(y = channelTitle, x = view_count, alpha = view_count)) +
   geom_point(color = "blue") +
   facet_grid(. ~trending_year) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   theme_linedraw(base_family = "NanumGothic") +
   labs(title = 'Top 50 US YouTube channels with highest views of each year',
        subtitle = 'Film, music, TV channels, commercials, shorts are excluded',
@@ -684,7 +684,7 @@ ggplot(US_personal_paytop20, aes(y = channelTitle, x = USD_pay_in_k, fill = view
   geom_col() +
   facet_grid(. ~trending_year) +
   scale_fill_gradient(low = "light blue", high = "dark blue") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = 'US YouTube channels earned (per 1000 views)',
        subtitle = 'Film, music, TV channels, commercials, shorts are excluded',
        x = 'USD (per 1000 dollars)',

@@ -6,13 +6,6 @@ categories: data
 ---
 
 
----
-layout: post
-title: Kaggle - YouTube trending data 2020-2023
-tag: youtube, kaggle, data analysis
-categories: data
----
-
 ## US, Canada & Japan
 
 ### Background:
