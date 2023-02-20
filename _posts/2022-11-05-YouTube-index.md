@@ -5,6 +5,14 @@ tag: youtube, kaggle, data analysis
 categories: data
 ---
 
+
+---
+layout: post
+title: Kaggle - YouTube trending data 2020-2023
+tag: youtube, kaggle, data analysis
+categories: data
+---
+
 ## US, Canada & Japan
 
 ### Background:
@@ -50,6 +58,3 @@ List of YouTube videos that have been on daily trending list from
 | 28 | Science & Technology |
 | 29 | Nonprofits & Activism |
 | 43 | Shows |
-
-
-
