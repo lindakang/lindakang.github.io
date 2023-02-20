@@ -660,7 +660,7 @@ ggplot(US_top50_view_year, aes(y = channelTitle, x = view_count, alpha = view_co
        alpha = "Views")
 ```
 
-![Figure 11](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9FZjC6lgKaOXIyqds_40ek_3TZGaEI-A9n827YNDkGbVTW_L_06sJABNDpMVOKVj5PcBeCzr--cONRxCp81huZKvY8SciqOkfR53eSghFnPSCfEweXpwirGs8yKuYdecHiB0WJwVlEOba8iq91D-2ePbcj4Y4uvS0chXFzYKllQnHRLlHYgfuljGq/s16000/p11_ex-channels-top100views.png)<!-- -->
+![Figure 11](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVE8ArplzB56apcUSaFm18ZgGgluaRYLbsVgOTa-JBh55h8ahCgnhkDS_0CMX1iTLdPE5qD6-7aq6h7tMtfdnBJ-Vzu1FEfQrLVvzm5g0jOwC-1Eeps-F_yqQGyC8vO3rnkINDXrXlW1Db30NNMJpCRvwcdO3eFD2fEycxTNoJaVxsbtJCmJBYVd5q/s672/p11_ex-channels-top100views.png)<!-- -->
 
 #### 3-2-3. Paid by ad views
 
