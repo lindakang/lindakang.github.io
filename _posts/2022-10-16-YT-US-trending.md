@@ -24,9 +24,9 @@ List of YouTube videos that have been on daily trending list from
 
 ### Want to know:
 
-1.  Channels & videos that on trending (top 50 \# of days on trending)
-2.  Channels & videos with most views (top 100)
-3.  Paid from views (top 20)
+1. Top 50 channels and videos that appeared the most on trending
+2. Top 100 channels and videos with the highest views
+3. Top 10 channels with the highest revenue sharing
 
 ### YouTube Channel category
 
@@ -179,16 +179,13 @@ No NAs in the columns in our final version of dataset.
 
 ### 3-1. All categories
 
-We first take a look at all categories and all videos, and check out
-general trend between 2020 to present.
+We will start by analyzing all categories and videos to identify general trends from 2020 to the present.
 
 #### 3-1-1. Number times of trending
 
-Which category is most popular (i.e., on trending most frequent) each
-year between 2020 and present? To compare each category and year, first
-group the data by trending year and category, then count the number of
-times each category on trending. Color is used to indcate total number
-of views of each category.
+Which category is the most popular (i.e., appears on trending the most frequently) each year between 2020 and present?
+
+To compare categories and years, we first group the data by trending year and category, and then count the number of times each category appears on trending. We use color to indicate the total number of views for each category.
 
 ``` r
 # no. times on trending of each category
@@ -217,11 +214,7 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
 
 ![Figure 1](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjoPSdhi5TNSPlE5pNhecfMt-IsXctYXpuZRY-9EVQ08mcXI-5LFcILawvARd1gI55_iGzkuHt9TBtbOsSibQvWsxaLaKYfUkUOWCb8lL93q99cXs-yrUxyahiMjcZEUlRzvbrLkwaiUFutk1x3QljoN3yfQn9ctYnE27M4ii2ydCfvJhmJNnGN5ft/s16000/p01_trending-category-total-views.png)<!-- -->
 
-Entertainment & Gaming videos are the most popular ones for each year.
-They both on trending most frequent and also have higher total views.
-Note that although music is the third on trending, it has higher or
-comparable total views to Entertainment and Gaming, probably becuase
-people like to replay music videos on YouTube.
+The most popular categories for each year between 2020 and present are Entertainment and Gaming videos, as they appeared on trending the most frequently and also had higher total views. It's worth noting that although music was the third most popular category on trending, it had comparable or higher total views than Entertainment and Gaming, which may be due to people rewatching music videos on YouTube.
 
 ``` r
 # Fig 02 - No. times on trending & average views per trending time
@@ -237,14 +230,9 @@ ggplot(US_channel_trending, aes(y = category, x = chtrending_n, fill = ch_views_
 
 ![Figure 2](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfNVMMf0w9WoK1VX74bYlI-KqAefHwF5z2RJLoQUYtjVtC1FU3xNF6eE8P4qumAyfZZsSyeSItMGpGo_eA_nrHmLjVfJ5tfJOKNG9jWCqRWL8J7ZLLbUpvFOUvPLEO0Mnfzfk8z0i1hsbVy8m8D2aILd4GW7SssJMERKvooqrvHoQ_4M3jBP-M8xag/s16000/p02_trending-category-avg-views.png)<!-- -->
 
-Not much differences between total views or average views of each
-category. If looking at average views per trending time, music still has
-higher or comparable total views to Entertainment and Gaming.
+There aren't many differences between the total views or average views of each category. However, when looking at the average views per trending time, music still has higher or comparable total views to entertainment and gaming.
 
-What are the channels on trending for \>200 times? The data is first
-grouped by trending year because we want to know what are the most
-popular channels of each year, then by channel and calculate the number
-of times each channel on trending.
+Next, we identify the channels that have appeared on the trending list more than \>200 times. We first group the data by trending year because we want to know what the most popular channels were for each year. Then we group by channel and calculate the number of times each channel appeared on the trending list.
 
 ``` r
 # no. times on trending of each channel
@@ -277,20 +265,11 @@ ggplot(US_channel_200trending, aes(y = channelTitle, x = chtrending_n, fill = ch
 
 ![Figure 3](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEire_8nsLJlaRaKc9zKoIo1bNmUR-aiIisfJbtUhRid2hKByNW-j8OB2LBECgKHAw-DiijIueeRAe52f6fIzwgrkdAM2Q4lWLz1TfnePTH8BvKD8YtOlo-T-k3__CKVwraX-pj7-KnDDYxCT_vYMD2Vaa0C49Yo9Fyrl9nY-KiWf-jg4vEuqjHR8KFQ/s16000/p03_trending-channels.png)<!-- -->
 
-Interestingly, Sports is not the most popular category fromo 2020 to
-2022, however, NFL and NBA channels are the only channels that are on
-trending for more than 200 times every year. This could be becuase
-basketball and football are the 2 most popular sports in the US.
+It is interesting to note that while Sports is not the most popular category from 2020 to 2022, the NFL and NBA channels are the only channels that have been on trending for more than 400 times each year. This could be due to basketball and football being the two most popular sports in the US.
 
-Note that both of MrBeast’s channels “MrBeast” and “MrBeast Gaming” were
-on trending \>400 times in 2021 but less than 200 in 2022. MrBeast
-channels dropped a lot! Or we should say, all channels drop except
-sports channels.
+It is worth mentioning that both of MrBeast's channels, "MrBeast" and "MrBeast Gaming," were on trending over 200 times in 2021, but less than 200 times in 2022, experiencing a significant drop in popularity. However, all channels, except for sports channels, experienced a drop in popularity.
 
-Which videos are on trending for at least a month? We first group the
-data by videos, then calculate the number of times they are on channels.
-We assume that YouTube videos typically remain consecutively on the
-trending list for an extended period of time.
+To identify videos that have remained on trending for an extended period, we grouped the data by videos and calculated the number of times they appeared on the trending list consecutively for at least a month.
 
 ``` r
 # Videos on Trending for >30 days
@@ -338,8 +317,7 @@ US_video_30trending
     ## 12          32       504955736 Entertainment Britain's Got Talent
     ## 13          31       367867655        Sports         Liverpool FC
 
-Surprisingly, SpaceX’s Starlink Mission was on trending for almost half
-an year.
+Interestingly, SpaceX's Starlink Mission remained on trending for almost half a year, which is a remarkable achievement.
 
 #### 3-1-2. Highest views
 
@@ -384,8 +362,7 @@ ggplot(US_category_views, aes(y = category, x = n_cat_views, fill = avg_views)) 
 
 ![Figure 4](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1BMSoLD8ChMnGJbB8PQDadwRLQ3wmKVo3Zh6qw59ouyQGftloKbr6tl5VASYU4f3-tjR906EyvGX1IASt8l_R8t9jIU20qCXK8D_v7QLIrqLpkn_I-g8Daz_voDeStHDHpmQDCicWZzzJ8R4StvLrlDxlIBb4vSzDhyV4bhzv3BLA5wLmuGgg2Lj7/s16000/p04_trending-categoyr-top100.png)<!-- -->
 
-In 2020, most popular videos are music, then shift to Entertainmen in
-2021. Two most popular categories in 2022 are News and music.
+The most popular category in 2020 was music, which shifted to entertainment in 2021. In 2022, News and music were the two most popular categories.
 
 ``` r
 # Fig 05 - Channels with videos of top 100 views: Higher views do not correlate with more likes
@@ -425,7 +402,7 @@ ggplot(US_channel_top100, aes(y = title, x = view_count, alpha = likes)) +
 
 ### 3-1-3. Paid by ad views
 
-To estimate how much each channel get paid.
+We can estimate the revenue sharing for each channel based on the information provided below.
 
 “A good rule of thumb is assuming that only half of your views across
 the board will be monetized. That said, somewhere around \$5-7 per 1,000
@@ -461,12 +438,11 @@ ggplot(USchannel_pay, aes(y = channelTitle, x = USD_pay_in_k, fill = view_sum)) 
 
 ![Figure 7](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh__4GQXfn7liiwsW8esTFGRybKoh-WlYhaND-kib2vadisQhxaHqMDPC4P2l7r8HxJD8TEbqoehEpwJxjIp5McGvlg11iUxVXNHxxn1X43KLxhpRCSrZbC2aogcotCph0wpjFzEU3kBmhQlvSE2l6b_qqeQIjicG1VzGEpQ3a6pUu0FYdGxhXSwdBR/s1600/p07_top20-paid.png)<!-- -->
 
-MrBeast earns lots of money!
+It is estimated that MrBeast has the highest revenue sharing among YouTube channels.
 
 ### 3-2. Channels with excluded categories
 
-Because channels with high views are music, movies, sports, TV shows, we
-want to exclude those to see what types of channels give higher views.
+Because the channels with high views are typically related to music, movies, sports, and TV shows, we want to exclude those categories to determine which types of channels have higher views.
 
 ``` r
 ## Exclude music, films, sports, etc
@@ -522,8 +498,7 @@ ggplot(US_personal_trending, aes(y = category, x = n_personal_trending, fill = a
 
 ![Figure 8](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjp2HfeFHZD-IHDR_KnnypkJ7lnzVAdLM7KYBoBuGBbjcoMS9qgJt0xRjxNHOI6CE800t_LkiC1RbHqO-97LcU9liSlD5IuY5eY-iotoRK5pxt7t73OM4jM8cn8uGiyOOH-KEIBS-TrqASxZWVu6mTIGK9d0c4PpGq5p7S0mPz9pxat26yQHZ2RPGdL/s16000/p08_ex-trending-category-avg-views.png)<!-- -->
 
-Gaming and Entertainment (personal, not commercial) became very popular
-since 2021.
+There has been a surge in popularity of personal Gaming and Entertainment content since 2021.
 
 ### 3-2-2. Highest view
 
@@ -664,7 +639,7 @@ ggplot(US_top50_view_year, aes(y = channelTitle, x = view_count, alpha = view_co
 
 #### 3-2-3. Paid by ad views
 
-Which channels make most money?
+Which channels have highest revenue sharing?
 
 ``` r
 US_personal_paytop20 <- US_nocomm %>%
@@ -693,3 +668,6 @@ ggplot(US_personal_paytop20, aes(y = channelTitle, x = USD_pay_in_k, fill = view
 ```
 
 ![Figure 12](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgD7FgqzUVXHzVZM0odnkcL50zV4o2GSKlw64wKxTHVUwX3lqgm-4AOXXYbcoiNqY8Raz37f0xYJ_ksS6-1lN2VAk2YA0sJaUSilJjcBBvksjerMvzOrty5ySOMrzvZyzVq48aTXJsLaK6r8Con1R5WurNSs9iMEKCRuyLMqx2ujDbYSTdoK-2ciQ-S/s16000/p12_ex-top20-paid.png)<!-- -->
+
+MrBeast is the one have highest revenue sharing since 2020. Other than that, top 10 highest revenue sharing varies for each year.
+
