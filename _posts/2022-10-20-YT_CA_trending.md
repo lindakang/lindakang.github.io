@@ -614,7 +614,7 @@ ggplot(CA_nocomm_paytop20, aes(y = channelTitle, x = USD_pay_in_k, fill = view_s
        fill = "Total views")
 ```
 
-![Figure 10](2https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQyASHmFu1l-vDsq4jje3aYr1jlLKwuTo4DJQzg_P-qUj8B5n0I79eYUGSsH9QbcjfkuJcsGwPHmWzRdSCTvPZjngEZEl9Enw8f394KWpkKa3uTX-0W3ofGwVZfeeBlyfviYK-R9I2FzuAEXbexq5k4etdADoF-UP1GsVb6JLkwthS_x4nKhbO1aY6/s16000/p10_ex-channels-paid.png)<!-- -->
+![Figure 10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQyASHmFu1l-vDsq4jje3aYr1jlLKwuTo4DJQzg_P-qUj8B5n0I79eYUGSsH9QbcjfkuJcsGwPHmWzRdSCTvPZjngEZEl9Enw8f394KWpkKa3uTX-0W3ofGwVZfeeBlyfviYK-R9I2FzuAEXbexq5k4etdADoF-UP1GsVb6JLkwthS_x4nKhbO1aY6/s16000/p10_ex-channels-paid.png)<!-- -->
 
 Same as in the US, MrBeast has had the highest revenue sharing in Canada
 since 2020. Apart from that, the top 10 channels with the highest
