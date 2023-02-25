@@ -51,3 +51,9 @@ List of YouTube videos that have been on daily trending list from
 | 28 | Science & Technology |
 | 29 | Nonprofits & Activism |
 | 43 | Shows |
+
+### Data analysis
+
+1. [US YT EDA](https://lindakang.github.io/data/2022/10/16/YT-US-trending.html)
+2. [Canada YT EDA](https://lindakang.github.io/data/2022/10/20/YT_CA_trending.html)
+3. Japan YT EDA
