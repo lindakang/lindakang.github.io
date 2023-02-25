@@ -10,9 +10,7 @@ categories: data
 
 ### Background:
 
-This is just for practice and for fun and thus, will only focus on US,
-Canada and Japan YouTube channels. This will be divided into 3 parts so
-it won’t be too long.
+This is just for practice and for fun and thus, will only focus on US, Canada and Japan YouTube channels. This will be divided into 3 parts so it won't be too long.
 
 ### Dataset
 
@@ -502,7 +500,7 @@ There has been a surge in popularity of personal Gaming and Entertainment conten
 
 ### 3-2-2. Highest view
 
-What are the categories with most highest views?
+Which categories have the most views on YouTube?
 
 ``` r
 # Personal videos of top 100 videos of each year
@@ -611,7 +609,7 @@ ggplot(US_nocomm_top100views, aes(y = channelTitle, x = view_count, alpha = like
 
 ![Figure 10](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiY1J4aVwro5Q5PtBRxmCF5jmTLny4WeFYX_hoM1DiHM7IrdNHm3jSVN4LgJzOsu5tUSqEU-39-DcAtQUHgiAvATnS7p13e7ed3-yOqGJLifzn4qY_LxN5-6kl1FKh5I9pQ9HjlkVe47fJaIn4SIrRlPRxVP2hDbHjzJxZtWtm5BnLinrldVR9aMPeF/s16000/p10_ex-trending-channels-top100views.png)<!-- -->
 
-MrBeast has the highest views in 2021
+In 2021, MrBeast had the highest views on YouTube. However, in 2023, a new channel has gained popularity - Bizarrap, which is a personal channel of an Argentine DJ and record producer.
 
 What are the vidoes with highest views?
 
