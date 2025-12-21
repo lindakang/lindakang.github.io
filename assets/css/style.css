@@ -36,7 +36,7 @@ a:hover { text-decoration: underline; }
     padding: 40px;
     background: #fff;
     
-    max-width: 780px;     /* 從 900px 改成 780px */
+    max-width: 850px;     /* 從 900px 改成 850px */
     /* 780px 左右是筆電上閱讀最舒適的寬度，不會覺得一行字太長 */
     /* 讓文章內容在左側區域內「置中」或「靠右」 */
     /* 如果想要文章靠著側欄，用 margin-left: auto; */
@@ -46,7 +46,7 @@ a:hover { text-decoration: underline; }
 
 /* 右側側欄 */
 .sidebar {
-    width: 380px;         /* 從 300px 改成 380px，讓它變寬、變大氣 */
+    width: 350px;         /* 從 300px 改成 350px，讓它變寬 */
     min-width: 320px;     /* 保護文字不換行的底線 */
     
     background-color: var(--sidebar-bg);
