@@ -1,10 +1,12 @@
 ---
-layout: post
+layout: default
 title: Kaggle - YouTube trending data 2020-2023
-tag: youtube, kaggle, data analysis
-categories: data
+date: 2022-11-05
+tags: [youtube, kaggle, data analysis]
+categories: 用 R 玩分析
 ---
 
+# Kaggle - YouTube trending data 2020-2023
 
 ## US, Canada & Japan
 
@@ -26,7 +28,7 @@ List of YouTube videos that have been on daily trending list from
 
 ### Want to know:
 
-1.  Channels & videos that on trending (top 50 \# of days on trending)
+1.  Channels & videos that on trending (top 50 # of days on trending)
 2.  Channels & videos with most views (top 100)
 3.  Paid from views (top 20)
 
