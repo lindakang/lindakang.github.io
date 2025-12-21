@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="site-wrapper">
+    
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <header class="post-header">
+            <h1 class="mobile-title">{{ site.title }}</h1>
+        </header>
+        {{ content }}
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-sticky">
+        
+        <div class="sidebar-header center-align">
+            <img src="https://placehold.co/100x100?text=Logo" alt="Logo" class="site-logo">
+            <h2 class="site-title">{{ site.title }}</h2>
+        </div>
+
+        <div class="sidebar-intro center-align">
+            <p>生科社畜的科學閒聊</p>
+            <p>🧬 Mol Bio｜🧫 Cell Bio｜🦠 Virology</p>
+            <p style="font-size: 0.85em; margin-top: 10px;">合作邀約歡迎 email:<br>
+            <a href="mailto:nonproscience@gmail.com">nonproscience@gmail.com</a></p>
+            <div class="intro-details">
+                <p>📍文稿：科普文、公司文、產業文等等</p>
+                <p>📍諮詢：實驗設計、加拿大研究所、生科產業</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <nav class="sidebar-nav left-align">
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">首頁 (所有文章)</a></li>
+                <li><a href="{{ '/category/biotech-news' | relative_url }}">生技醫藥新聞</a></li>
+                <li><a href="{{ '/category/interesting-research' | relative_url }}">有趣的研究</a></li>
+                <li><a href="{{ '/category/pharma-analysis' | relative_url }}">生技藥廠公司分析</a></li>
+                <li><a href="{{ '/category/virology' | relative_url }}">病毒相關</a></li>
+                <li><a href="{{ '/category/lab-chat' | relative_url }}">實驗室閒聊</a></li>
+                <li><a href="{{ '/category/career' | relative_url }}">職涯無涯</a></li>
+                <li><a href="{{ '/category/life' | relative_url }}">生活碎念</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <div class="sidebar-socials left-align">
+            <h3>追蹤我們</h3>
+            <div class="social-links">
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" title="Threads"><i class="fab fa-threads"></i></a>
+                <a href="#" target="_blank" title="Gumroad"><i class="fas fa-store"></i></a> <a href="#" target="_blank" title="Buy Me a Coffee"><i class="fas fa-coffee"></i></a>
+            </div>
+        </div>
+
+        <div class="sidebar-newsletter left-align">
+            <h3>訂閱電子報</h3>
+            <a href="https://nonproscience.beehiiv.com/subscribe" target="_blank" class="btn btn-subscribe">前往訂閱 (Beehiiv)</a>
+        </div>
+
+        <div class="sidebar-footer left-align">
+            <p style="font-size: 0.8rem; color: #666;">
+                到訪人數：<span id="busuanzi_value_site_uv">Loading...</span>
+            </p>
+            <p class="copyright">Copyright @ 2022, nonproscience</p>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>
