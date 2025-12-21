@@ -1,3 +1,4 @@
-# Data of Life
+# 不專業學術閒聊
 
-A collection of data analysis in our life
+生科社畜的科學閒聊
+🧬 Mol Bio｜🧫 Cell Bio｜🦠 Virology
