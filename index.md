@@ -3,10 +3,11 @@ layout: default
 title: 首頁
 ---
 
-# 不專業學術閒聊
-
-生科社畜的科學閒聊<br/>
-🧬 Mol Bio｜🧫 Cell Bio｜🦠 Virology
+<div style="text-align: center; margin-bottom: 30px;">
+    <img src="/assets/images/不專業學術閒聊.jpg" 
+         alt="不專業學術閒聊" 
+         style="width: 100%; max-width: 600px; height: auto; border-radius: 10px;">
+</div>
 
 <div style="margin-top: 40px;">
   <h2>最新文章</h2>
