@@ -111,7 +111,7 @@ a:hover { text-decoration: underline; }
     color: #555;
     font-weight: 500;
     display: block;
-    padding: 5px 0;
+    padding: 3px 0;
 }
 .sidebar-nav a:hover {
     color: #b9e5e8;
@@ -174,4 +174,21 @@ a:hover { text-decoration: underline; }
         margin-bottom: 20px;
         color: var(--primary-color);
     }
+}
+
+.post-tags a {
+    display: inline-block;
+    background-color: #e9f1f9;   /* 灰色背景 */
+    color: #8d9faf !important;      /* 文字顏色 */
+    padding: 5px 12px;           /* 內距 (讓它胖一點) */
+    border-radius: 15px;         /* 圓圓的角 */
+    font-size: 0.85rem;
+    margin-right: 8px;
+    transition: 0.2s;
+}
+
+.post-tags a:hover {
+    background-color: #e9f1f9;   /* 滑鼠移上去背景變藍 */
+    color: #fff !important;      /* 滑鼠移上去文字變白 */
+    text-decoration: none;
 }
