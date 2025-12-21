@@ -36,18 +36,19 @@ a:hover { text-decoration: underline; }
     padding: 40px;
     background: #fff;
     
-    /* 新增這裡：限制內容的最大寬度，讓文章保持在好閱讀的範圍 */
-    max-width: 900px; 
-    
+    max-width: 780px;     /* 從 900px 改成 780px */
+    /* 780px 左右是筆電上閱讀最舒適的寬度，不會覺得一行字太長 */
     /* 讓文章內容在左側區域內「置中」或「靠右」 */
     /* 如果想要文章靠著側欄，用 margin-left: auto; */
-    /* 如果想要文章在左邊空白處置中，用 margin: 0 auto; (推薦) */
-    margin: 0 auto; 
+    /* 如果想要文章在左邊空白處置中，用 margin: 0 auto; (推薦) */    
+    margin: 0 auto;       /* 確保文章區在剩下的空間裡「置中」 */
 }
 
 /* 右側側欄 */
 .sidebar {
-    width: 300px; /* 固定寬度 */
+    width: 380px;         /* 從 300px 改成 380px，讓它變寬、變大氣 */
+    min-width: 320px;     /* 保護文字不換行的底線 */
+    
     background-color: var(--sidebar-bg);
     border-left: 1px solid var(--border-color);
     padding: 30px;
