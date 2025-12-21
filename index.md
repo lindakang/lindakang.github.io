@@ -3,7 +3,7 @@ layout: default
 title: 首頁
 ---
 
-# 歡不專業學術閒聊
+# 不專業學術閒聊
 
 生科社畜的科學閒聊<br/>
 🧬 Mol Bio｜🧫 Cell Bio｜🦠 Virology
