@@ -21,10 +21,13 @@ a:hover { text-decoration: underline; }
 /* --- 佈局 (Flexbox) --- */
 .site-wrapper {
     display: flex;
-    flex-direction: row; /* 預設橫向排列 */
+    flex-direction: row;
     min-height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
+    
+    /* 修改這裡：讓它佔滿 100% 寬度，移除最大寬度限制 */
+    width: 100%;
+    max-width: none; 
+    margin: 0; 
 }
 
 /* 左側內容區 */
@@ -32,6 +35,14 @@ a:hover { text-decoration: underline; }
     flex: 1; /* 佔據剩餘空間 */
     padding: 40px;
     background: #fff;
+    
+    /* 新增這裡：限制內容的最大寬度，讓文章保持在好閱讀的範圍 */
+    max-width: 900px; 
+    
+    /* 讓文章內容在左側區域內「置中」或「靠右」 */
+    /* 如果想要文章靠著側欄，用 margin-left: auto; */
+    /* 如果想要文章在左邊空白處置中，用 margin: 0 auto; (推薦) */
+    margin: 0 auto; 
 }
 
 /* 右側側欄 */
