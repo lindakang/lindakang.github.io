@@ -94,7 +94,7 @@ a:hover { text-decoration: underline; }
 }
 /* 直接對裡面的 p 下指令 */
 .intro-details p {
-    font-size: 0.85rem !important; /* 強制設定大小 */
+    font-size: 0.8rem !important; /* 強制設定大小 */
     margin: 3px 0;      /* 微調行距 */
     line-height: 1.4;   /* 讓行高緊湊一點 */
 }
