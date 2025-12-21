@@ -4,7 +4,7 @@ title: 首頁
 ---
 
 <div style="text-align: center; margin-bottom: 30px;">
-    <img src="/assets/images/不專業學術閒聊.jpg" 
+    <img src="/assets/images/不專業學術閒聊.png" 
          alt="不專業學術閒聊" 
          style="width: 100%; max-width: 600px; height: auto; border-radius: 10px;">
 </div>
