@@ -81,17 +81,22 @@ a:hover { text-decoration: underline; }
 }
 
 /* Intro */
+.sidebar-intro p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
 .intro-details {
     margin-top: 15px;
     text-align: left; /* 雖然區塊置中，但這兩行靠左比較好看，若要強制置中可刪除此行 */
     background: #eef1f5;
     padding: 5px;
     border-radius: 6px;
-    font-size: 0.85rem;
 }
-.sidebar-intro p {
-    margin: 5px 0;
-    font-size: 0.8rem;
+/* 直接對裡面的 p 下指令 */
+.intro-details p {
+    font-size: 0.85rem !important; /* 強制設定大小 */
+    margin: 3px 0;      /* 微調行距 */
+    line-height: 1.4;   /* 讓行高緊湊一點 */
 }
 
 /* Menu */
