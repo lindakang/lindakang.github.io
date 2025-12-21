@@ -1,7 +1,7 @@
 /* --- 基礎設定 --- */
 :root {
-    --primary-color: #7253ed; /* Just the Docs 的紫色 */
-    --text-color: #333;
+    --primary-color: #4a628a; 
+    --text-color: #5d6066;
     --bg-color: #fff;
     --sidebar-bg: #f5f6fa;
     --border-color: #e1e4e8;
@@ -100,7 +100,7 @@ a:hover { text-decoration: underline; }
     padding: 0;
 }
 .sidebar-nav li {
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 .sidebar-nav a {
     color: #555;
@@ -109,9 +109,9 @@ a:hover { text-decoration: underline; }
     padding: 5px 0;
 }
 .sidebar-nav a:hover {
-    color: var(--primary-color);
+    color: #b9e5e8;
     padding-left: 5px;
-    transition: 0.2s;
+    text-decoration: none;
 }
 
 /* Socials */
