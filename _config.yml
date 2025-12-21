@@ -1,12 +1,10 @@
-# Site settings
-title: Data of Life # site.title
-author:
-  name: Data of Life
-  LinkedIn: https://www.linkedin.com/in/linda-kang-64bb8546/
-description: "A collection of data analysis in our life."
-
-# Build settings
-remote_theme: jekyll/minima
-
+title: 不專業學術閒聊
+email: nonproscience@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  生科社畜的科學閒聊
+baseurl: "" # 如果你有自訂網域留空，如果是 user.github.io/repo 這裡填 /repo
+url: "" 
+markdown: kramdown
+theme: minima # 這裡只是為了確保基本依賴，實際上我們會用自訂 layout
 plugins:
-  - jekyll-remote-theme
+  - jekyll-feed
