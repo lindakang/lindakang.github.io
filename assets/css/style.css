@@ -89,9 +89,9 @@ a:hover { text-decoration: underline; }
     margin-top: 15px;
     text-align: left; /* 雖然區塊置中，但這兩行靠左比較好看，若要強制置中可刪除此行 */
     background: #eef1f5;
-    padding: 10px;
+    padding: 5px;
     border-radius: 6px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 /* Menu */
