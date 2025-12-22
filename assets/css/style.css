@@ -279,16 +279,16 @@ a:hover { text-decoration: underline; }
 /* ========================================= */
 
 table {
-    width: 100%;            /* 讓表格寬度佔滿版面 */
+    width: 90%;            /* 讓表格寬度佔滿版面 */
     border-collapse: collapse; /* 重要！讓邊框合併，才不會出現雙線 */
     margin: 20px 0;         /* 表格上下留一點空白 */
-    font-size: 0.95rem;     /* 字體大小微調 */
+    font-size: 0.9rem;     /* 字體大小微調 */
 }
 
 /* 表格標題 (th) 和 內容儲存格 (td) 的共同設定 */
 th, td {
     border: 1px solid #ddd; /* 加上淺灰色的細邊框 */
-    padding: 10px 12px;     /* 內距：讓文字不要貼著框線，看起來比較舒服 */
+    padding: 10px 10px;     /* 內距：讓文字不要貼著框線，看起來比較舒服 */
     text-align: left;       /* ⭐ 設定預設靠左對齊 */
 }
 
@@ -395,17 +395,43 @@ p code, li code, td code {
     font-size: 1rem;
 }
 
+/* ========================================= */
+/* --- 讓標籤變成可點擊按鈕 (Tag Links) --- */
+/* ========================================= */
+
 /* --- 藍色標籤樣式 --- */
 .tag-pill-blue {
     display: inline-block;
     padding: 4px 12px;
     font-size: 0.85rem;
-    color: #0969da;            /* 藍色文字 */
+    color: #96b1cc;            
     background-color: #ddf4ff; /* 淺藍色背景 */
     border: 1px solid rgba(54, 163, 255, 0.4); /* 藍色邊框 */
     border-radius: 20px;       /* 圓弧造型 */
     margin-right: 8px;
     margin-bottom: 5px;
+}
+
+/* 強制拿掉超連結底線，讓它看起來像按鈕 */
+a.tag-pill-blue, a.tag-pill {
+    text-decoration: none !important; 
+    cursor: pointer;
+    display: inline-block; /* 確保形狀完整 */
+}
+
+/* 滑鼠移過去的效果 */
+a.tag-pill-blue:hover {
+    background-color: #bfeaf5; 
+    border-color: #0969da;
+    text-decoration: none;
+}
+
+/* 滑鼠移過去的效果 */
+a.tag-pill:hover {
+    background-color: #96b1cc; /* 變灰色 */
+    color: #e9f1f9 !important;    
+    border-color: #ccc;
+    text-decoration: none;
 }
 
 /* ========================================= */
