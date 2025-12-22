@@ -413,18 +413,19 @@ p code, li code, td code {
 /* ========================================= */
 
 .sidebar-search {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
     padding: 0 5px; /* 稍微留一點左右空間 */
 }
 
 /* 輸入框本體 */
 #search-input {
     width: 100%;
-    padding: 10px 15px;
-    border: 2px solid #a5b3ce; /* 淺藍灰色邊框 */
+    padding: 5px 10px;
+    border: 1px solid #a5b3ce; /* 淺藍灰色邊框 */
     border-radius: 8px;        /* 圓角 */
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: #555;
     background-color: #fff;
     outline: none;             /* 去掉預設的黑框 */
@@ -441,7 +442,7 @@ p code, li code, td code {
 #results-container {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 8px;
     background: #fff;
     border: 1px solid #eee;
     border-radius: 6px;
@@ -455,7 +456,7 @@ p code, li code, td code {
 }
 
 #results-container li {
-    padding: 8px 12px;
+    padding: 6px 10px; /* 列表內距 */
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -466,7 +467,7 @@ p code, li code, td code {
 #results-container a {
     color: #333;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     display: block;
 }
 
