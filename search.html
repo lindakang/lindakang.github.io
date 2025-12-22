@@ -1,0 +1,85 @@
+---
+layout: default
+title: 搜尋結果
+permalink: /search/
+---
+
+<div class="search-page">
+    <h1 class="page-title">搜尋結果：<span id="search-term" style="color: #007bff;"></span></h1>
+    <hr>
+    
+    <div id="search-results-container" class="post-cards-container">
+        <p style="color: #999;">正在搜尋中...</p>
+    </div>
+</div>
+
+<script>
+window.onload = function() {
+    // 1. 抓取網址上的查詢參數 (例如 ?q=YouTube)
+    var urlParams = new URLSearchParams(window.location.search);
+    var query = urlParams.get('q');
+    
+    if (query) {
+        document.getElementById('search-term').innerText = query;
+        // 轉成小寫以方便比對
+        var lowerQuery = query.toLowerCase();
+
+        // 2. 讀取我們之前做好的 search.json
+        fetch('{{ "/search.json" | relative_url }}')
+            .then(response => response.json())
+            .then(data => {
+                var results = [];
+                
+                // 3. 過濾資料
+                data.forEach(function(item) {
+                    // 只要標題、標籤或分類裡面有關鍵字，就算選中
+                    if (
+                        (item.title && item.title.toLowerCase().includes(lowerQuery)) ||
+                        (item.tags && item.tags.toLowerCase().includes(lowerQuery)) ||
+                        (item.category && item.category.toLowerCase().includes(lowerQuery))
+                    ) {
+                        results.push(item);
+                    }
+                });
+
+                // 4. 顯示結果
+                displayResults(results);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('search-results-container').innerHTML = '<p>搜尋功能暫時無法使用。</p>';
+            });
+    } else {
+        document.getElementById('search-term').innerText = "";
+        document.getElementById('search-results-container').innerHTML = '<p>請輸入關鍵字進行搜尋。</p>';
+    }
+};
+
+function displayResults(results) {
+    var container = document.getElementById('search-results-container');
+    container.innerHTML = ''; // 清空載入文字
+
+    if (results.length === 0) {
+        container.innerHTML = '<p>找不到與關鍵字相符的文章。</p>';
+        return;
+    }
+
+    // 產生卡片 HTML (跟你的分類頁面長得很像)
+    var html = '';
+    results.forEach(function(post) {
+        html += `
+        <article class="post-card">
+            <h3 class="post-card-title">
+                <a href="${post.url}">${post.title}</a>
+            </h3>
+            <div class="post-card-meta">
+                <span>${post.date}</span> &nbsp;•&nbsp; <span>${post.category}</span>
+            </div>
+            ${ post.tags ? `<div class="post-card-tags" style="margin-top:10px;">TAGS: ${post.tags}</div>` : '' }
+        </article>
+        `;
+    });
+
+    container.innerHTML = html;
+}
+</script>
