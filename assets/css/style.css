@@ -303,3 +303,42 @@ th {
 tr:hover {
     background-color: #f1f1f1;
 }
+
+/* ========================================= */
+/* --- 程式碼區塊樣式 (Code Blocks) --- */
+/* ========================================= */
+
+/* 1. 大塊程式碼 (Block Code) - 就是你截圖裡那一大塊 */
+pre {
+    background-color: #f6f8fa; /* 淺灰色背景 (類似 GitHub) */
+    border: 1px solid #d0d7de; /* 灰色細邊框 */
+    border-radius: 6px;        /* 圓角 */
+    padding: 16px;             /* 內距：讓字不要貼邊 */
+    overflow-x: auto;          /* 如果程式碼太長，允許左右捲動 */
+    margin: 20px 0;            /* 上下留白 */
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; /* 等寬字體 */
+    font-size: 0.9rem;         /* 字體稍微縮小一點點比較精緻 */
+    line-height: 1.45;
+}
+
+/* 2. 修正：確保 pre 裡面的 code 不會有額外的底色 */
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #24292f;            /* 程式碼文字顏色 (深灰) */
+}
+
+/* ========================================= */
+/* --- 行內程式碼樣式 (Inline Code) --- */
+/* ========================================= */
+
+/* 3. 行內程式碼 - 例如：文字中出現的 `library(tidyr)` */
+p code, li code, td code {
+    background-color: #f3f4f6; /* 淺灰底色 */
+    color: #d63384;            /* 亮粉紅色 (類似 Notion 風格，很顯眼) */
+    padding: 2px 6px;          /* 稍微撐開一點 */
+    border-radius: 4px;        /* 小圓角 */
+    font-size: 0.9em;          /* 字體小一點 */
+    font-family: Consolas, monospace;
+}
