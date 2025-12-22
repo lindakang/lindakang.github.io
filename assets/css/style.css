@@ -192,3 +192,84 @@ a:hover { text-decoration: underline; }
     color: #fff !important;      /* 滑鼠移上去文字變白 */
     text-decoration: none;
 }
+
+/* --- 文章底部專用樣式 --- */
+
+/* 1. 標籤 (小藥丸樣式) */
+.post-tags-container {
+    margin-bottom: 30px;
+}
+.post-tags-container strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+.tag-pill {
+    display: inline-block;
+    border: 1px solid #3498db; /* 藍色邊框 */
+    color: #3498db;            /* 藍色文字 */
+    padding: 5px 15px;
+    border-radius: 50px;       /* 圓弧形狀 */
+    font-size: 0.85rem;
+    background: white;
+}
+
+/* 分隔線 */
+.post-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+/* 2. 按鈕區域 */
+.post-navigation {
+    display: flex;
+    justify-content: space-between; /* 左中右分開 */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* 按鈕共用設定 */
+.nav-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white !important; /* 強制文字白色 */
+    text-align: center;
+    min-width: 80px;
+    transition: opacity 0.2s;
+}
+.nav-btn:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* 各種顏色的按鈕 */
+.btn-return { background-color: #5d6eb3; } /* 藍紫色 */
+.btn-gray   { background-color: #8e9499; } /* 灰色 */
+.btn-blue   { background-color: #007bff; } /* 亮藍色 */
+
+/* 無效按鈕 (例如沒有上一篇時) */
+.btn-disabled {
+    background-color: #e0e0e0;
+    color: #aaa !important;
+    cursor: default;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+/* 手機版調整 */
+@media (max-width: 600px) {
+    .post-navigation {
+        justify-content: center; /* 手機版置中 */
+    }
+    .nav-left { width: 100%; text-align: center; margin-bottom: 10px;}
+}
