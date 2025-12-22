@@ -3,7 +3,7 @@ layout: post
 title: Kaggle - YouTube trending data 2020-2023
 date: 2022-11-05
 tags: [youtube, kaggle, data analysis]
-categories: ["用 R 玩分析"]
+categories: ["閒時玩數據"]
 ---
 
 ## US, Canada & Japan
