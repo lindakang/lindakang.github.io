@@ -81,8 +81,8 @@ function displayResults(results) {
             tagsArray.forEach(function(tag){
                 // 為了安全去掉多餘空白
                 tag = tag.trim(); 
-                if(tag) {
-                    tagsHtml += `<span class="tag-pill-blue">${tag}</span>`;
+                if(tag) {  // 注意：這裡要用 JS 的 encodeURIComponent 來處理網址
+                    tagsHtml += `<a href="{{ '/tags/' | relative_url }}?tag=${encodeURIComponent(tag)}" class="tag-pill-blue">${tag}</a>`;
                 }
             });
             tagsHtml += '</div>';
