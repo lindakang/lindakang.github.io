@@ -1,8 +1,9 @@
 ---
 layout: post
 title: YouTube trending video data (2) - Canada
-tag: youtube, kaggle, data analysis
-categories: data
+date: 2022-10-20
+tags: [youtube, kaggle, data analysis]
+categories: ["用 R 玩分析"]
 ---
 
 ## US, Canada & Japan
