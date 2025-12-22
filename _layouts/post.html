@@ -22,7 +22,7 @@ layout: default
           <strong>Tags</strong><br>
           <div class="tags-list">
               {% for tag in page.tags %}
-              <span class="tag-pill">{{ tag }}</span>
+              <a href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-pill">{{ tag }}</a>
               {% endfor %}
           </div>
       </div>
