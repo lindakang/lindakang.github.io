@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post-header" style="margin-bottom: 30px;">
+    <h1 class="post-title" style="font-size: 2rem; color: #333;">{{ page.title }}</h1>
+    <p class="post-meta" style="color: #888; font-size: 0.9rem; margin-top: 5px;">
+      {{ page.date | date: "%Y-%m-%d" }}
+    </p>
+  </header>
+
+  <div class="post-content" style="line-height: 1.8; color: #444; margin-bottom: 50px;">
+    {{ content }}
+  </div>
+
+  <div class="post-footer-section">
+      
+      {% if page.tags.size > 0 %}
+      <div class="post-tags-container">
+          <strong>Tags</strong><br>
+          <div class="tags-list">
+              {% for tag in page.tags %}
+              <span class="tag-pill">{{ tag }}</span>
+              {% endfor %}
+          </div>
+      </div>
+      {% endif %}
+
+      <hr class="post-divider">
+
+      <div class="post-navigation">
+          
+          <div class="nav-left">
+              <a href="{{ site.baseurl }}/" class="nav-btn btn-return">Return to Home</a>
+          </div>
+
+          <div class="nav-center">
+              {% if page.previous %}
+                  <a href="{{ page.previous.url | relative_url }}" class="nav-btn btn-gray">Back</a>
+              {% else %}
+                  <span class="nav-btn btn-disabled">Back</span>
+              {% endif %}
+          </div>
+
+          <div class="nav-right">
+              {% if page.next %}
+                  <a href="{{ page.next.url | relative_url }}" class="nav-btn btn-blue">Next</a>
+              {% else %}
+                  <span class="nav-btn btn-disabled">Next</span>
+              {% endif %}
+          </div>
+      </div>
+  </div>
+
+</article>
