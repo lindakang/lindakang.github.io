@@ -416,7 +416,8 @@ p code, li code, td code {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 90%;
-    padding: 0 5px; /* 稍微留一點左右空間 */
+    padding-left: 0;    /* 去掉左邊內距，讓它靠左 */
+    margin-left: 0;     /* 去掉左邊外距 */
 }
 
 /* 輸入框本體 */
@@ -430,6 +431,7 @@ p code, li code, td code {
     background-color: #fff;
     outline: none;             /* 去掉預設的黑框 */
     transition: border-color 0.2s;
+    box-sizing: border-box; /* 確保邊框算在寬度內，不會爆版 */
 }
 
 /* 滑鼠點擊時，邊框變亮藍色 (像截圖那樣) */
