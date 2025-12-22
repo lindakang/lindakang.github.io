@@ -99,5 +99,35 @@
   </div>
 
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ "/search.json" | relative_url }}',
+        searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+        noResultsText: '<li style="color:#999; text-align:center;">No results found</li>',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+  // 監聽 Enter 鍵
+    var searchInput = document.getElementById('search-input');
+    
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function (e) {
+            // 如果按下的是 Enter 鍵 (key code 13)
+            if (e.key === 'Enter') {
+                e.preventDefault(); // 阻止預設行為
+                var term = searchInput.value;
+                if (term) {
+                    // 跳轉到我們剛剛建立的 search.html，並帶上參數 ?q=關鍵字
+                    window.location.href = '{{ "/search/" | relative_url }}?q=' + encodeURIComponent(term);
+                }
+            }
+        });
+    }
+</script>
 </body>
 </html>
