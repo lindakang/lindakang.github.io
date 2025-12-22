@@ -273,3 +273,33 @@ a:hover { text-decoration: underline; }
     }
     .nav-left { width: 100%; text-align: center; margin-bottom: 10px;}
 }
+
+/* ========================================= */
+/* --- 表格專用樣式 (Table Styles) --- */
+/* ========================================= */
+
+table {
+    width: 100%;            /* 讓表格寬度佔滿版面 */
+    border-collapse: collapse; /* 重要！讓邊框合併，才不會出現雙線 */
+    margin: 20px 0;         /* 表格上下留一點空白 */
+    font-size: 0.95rem;     /* 字體大小微調 */
+}
+
+/* 表格標題 (th) 和 內容儲存格 (td) 的共同設定 */
+th, td {
+    border: 1px solid #ddd; /* 加上淺灰色的細邊框 */
+    padding: 10px 12px;     /* 內距：讓文字不要貼著框線，看起來比較舒服 */
+    text-align: left;       /* ⭐ 設定預設靠左對齊 */
+}
+
+/* 表格標題列 (Header) 特別樣式 */
+th {
+    background-color: #f8f9fa; /* 給標題列一個淺灰底色，比較有層次 */
+    font-weight: bold;         /* 標題字加粗 */
+    color: #333;
+}
+
+/* (選用) 滑鼠移過去那一列會變色，增加互動感 */
+tr:hover {
+    background-color: #f1f1f1;
+}
