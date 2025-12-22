@@ -1,8 +1,9 @@
 ---
 layout: post
 title: YouTube trending video data (1) - US
-tag: youtube, kaggle, data analysis
-categories: data
+date: 2022-10-16
+tags: [youtube, kaggle, data analysis]
+categories: ["用 R 玩分析"]
 ---
 
 
