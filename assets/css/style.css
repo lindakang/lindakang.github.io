@@ -407,3 +407,70 @@ p code, li code, td code {
     margin-right: 8px;
     margin-bottom: 5px;
 }
+
+/* ========================================= */
+/* --- 搜尋框樣式 (Search Bar) --- */
+/* ========================================= */
+
+.sidebar-search {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 5px; /* 稍微留一點左右空間 */
+}
+
+/* 輸入框本體 */
+#search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #a5b3ce; /* 淺藍灰色邊框 */
+    border-radius: 8px;        /* 圓角 */
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #fff;
+    outline: none;             /* 去掉預設的黑框 */
+    transition: border-color 0.2s;
+}
+
+/* 滑鼠點擊時，邊框變亮藍色 (像截圖那樣) */
+#search-input:focus {
+    border-color: #4a90e2; 
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* 搜尋結果列表 */
+#results-container {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    display: none; /* 沒搜尋時隱藏 */
+}
+
+/* 當裡面有內容時顯示 */
+#results-container:not(:empty) {
+    display: block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#results-container li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#results-container li:last-child {
+    border-bottom: none;
+}
+
+#results-container a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+}
+
+#results-container a:hover {
+    color: #007bff;
+    background-color: #f9f9f9;
+}
