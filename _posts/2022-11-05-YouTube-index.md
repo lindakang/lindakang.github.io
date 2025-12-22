@@ -6,8 +6,6 @@ tags: [youtube, kaggle, data analysis]
 categories: ["用 R 玩分析"]
 ---
 
-# Kaggle - YouTube trending data 2020-2023
-
 ## US, Canada & Japan
 
 ### Background:
