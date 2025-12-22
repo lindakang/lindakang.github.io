@@ -342,3 +342,68 @@ p code, li code, td code {
     font-size: 0.9em;          /* 字體小一點 */
     font-family: Consolas, monospace;
 }
+
+/* ========================================= */
+/* --- 分類頁面：卡片式設計 (Card Style) --- */
+/* ========================================= */
+
+/* 卡片本體 */
+.post-card {
+    border: 1px solid #e1e4e8; /* 淺灰色邊框 */
+    border-radius: 8px;        /* 圓角 */
+    padding: 24px;             /* 內部留白 */
+    margin-bottom: 24px;       /* 卡片之間的距離 */
+    background-color: #fff;    /* 白色背景 */
+    transition: all 0.2s ease; /* 動畫效果 */
+}
+
+/* 滑鼠移上去時，邊框變深一點，增加互動感 */
+.post-card:hover {
+    border-color: #b0b8c1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* 微微的陰影 */
+}
+
+/* 卡片標題 */
+.post-card-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.post-card-title a {
+    color: #24292f;
+    text-decoration: none;
+}
+
+.post-card-title a:hover {
+    color: #0969da; /* 滑鼠移上去變藍色 */
+}
+
+/* 日期與資訊 */
+.post-card-meta {
+    font-size: 0.9rem;
+    color: #6e7781;
+    margin-bottom: 15px;
+}
+
+/* 內文摘要 */
+.post-card-excerpt {
+    color: #424a53;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* --- 藍色標籤樣式 --- */
+.tag-pill-blue {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    color: #0969da;            /* 藍色文字 */
+    background-color: #ddf4ff; /* 淺藍色背景 */
+    border: 1px solid rgba(54, 163, 255, 0.4); /* 藍色邊框 */
+    border-radius: 20px;       /* 圓弧造型 */
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
