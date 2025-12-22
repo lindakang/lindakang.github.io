@@ -1,81 +1,111 @@
 ---
 layout: default
-title: 搜尋結果
+title: Search Results
 permalink: /search/
 ---
 
 <div class="search-page">
-    <h1 class="page-title">搜尋結果：<span id="search-term" style="color: #007bff;"></span></h1>
-    <hr>
+    
+    <header style="margin-bottom: 30px;">
+        <h1 style="color: #5d6eb3; font-weight: bold; font-size: 2rem; margin-bottom: 10px;">Search Results</h1>
+        <p id="search-meta" style="color: #666; font-size: 1.1rem;">
+            Searching...
+        </p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-top: 20px;">
+    </header>
     
     <div id="search-results-container" class="post-cards-container">
-        <p style="color: #999;">正在搜尋中...</p>
-    </div>
+        </div>
+
 </div>
 
 <script>
 window.onload = function() {
-    // 1. 抓取網址上的查詢參數 (例如 ?q=YouTube)
     var urlParams = new URLSearchParams(window.location.search);
     var query = urlParams.get('q');
     
     if (query) {
-        document.getElementById('search-term').innerText = query;
-        // 轉成小寫以方便比對
         var lowerQuery = query.toLowerCase();
 
-        // 2. 讀取我們之前做好的 search.json
         fetch('{{ "/search.json" | relative_url }}')
             .then(response => response.json())
             .then(data => {
                 var results = [];
-                
-                // 3. 過濾資料
                 data.forEach(function(item) {
-                    // 只要標題、標籤或分類裡面有關鍵字，就算選中
+                    // 搜尋邏輯：比對標題、標籤、分類、摘要
                     if (
                         (item.title && item.title.toLowerCase().includes(lowerQuery)) ||
                         (item.tags && item.tags.toLowerCase().includes(lowerQuery)) ||
-                        (item.category && item.category.toLowerCase().includes(lowerQuery))
+                        (item.category && item.category.toLowerCase().includes(lowerQuery)) ||
+                        (item.excerpt && item.excerpt.toLowerCase().includes(lowerQuery))
                     ) {
                         results.push(item);
                     }
                 });
-
-                // 4. 顯示結果
+                
+                // 更新標題資訊
+                updateSearchMeta(results.length, query);
+                // 顯示卡片
                 displayResults(results);
             })
             .catch(error => {
                 console.error('Error:', error);
-                document.getElementById('search-results-container').innerHTML = '<p>搜尋功能暫時無法使用。</p>';
+                document.getElementById('search-results-container').innerHTML = '<p>Search is currently unavailable.</p>';
             });
     } else {
-        document.getElementById('search-term').innerText = "";
-        document.getElementById('search-results-container').innerHTML = '<p>請輸入關鍵字進行搜尋。</p>';
+        document.getElementById('search-meta').innerText = "Please enter a keyword.";
     }
 };
 
+function updateSearchMeta(count, term) {
+    var metaText = `Found ${count} result(s) for "${term}"`;
+    document.getElementById('search-meta').innerText = metaText;
+}
+
 function displayResults(results) {
     var container = document.getElementById('search-results-container');
-    container.innerHTML = ''; // 清空載入文字
+    container.innerHTML = '';
 
     if (results.length === 0) {
-        container.innerHTML = '<p>找不到與關鍵字相符的文章。</p>';
+        container.innerHTML = '<p style="color:#666; padding:20px 0;">No results found.</p>';
         return;
     }
 
-    // 產生卡片 HTML (跟你的分類頁面長得很像)
     var html = '';
     results.forEach(function(post) {
+        // 處理 Tags：把字串 "tag1, tag2" 切割成藍色小按鈕 HTML
+        var tagsHtml = '';
+        if (post.tags) {
+            var tagsArray = post.tags.split(', '); // 假設 search.json 用逗號空格分隔
+            tagsHtml = '<div class="post-card-tags" style="margin-top:15px;">';
+            tagsArray.forEach(function(tag){
+                // 為了安全去掉多餘空白
+                tag = tag.trim(); 
+                if(tag) {
+                    tagsHtml += `<span class="tag-pill-blue">${tag}</span>`;
+                }
+            });
+            tagsHtml += '</div>';
+        }
+
+        // 產生卡片 HTML (完全複製你分類頁面的結構)
         html += `
         <article class="post-card">
             <h3 class="post-card-title">
                 <a href="${post.url}">${post.title}</a>
             </h3>
+            
             <div class="post-card-meta">
-                <span>${post.date}</span> &nbsp;•&nbsp; <span>${post.category}</span>
+                <span>${post.date}</span> 
+                &nbsp;•&nbsp; 
+                <span>${post.category}</span>
             </div>
-            ${ post.tags ? `<div class="post-card-tags" style="margin-top:10px;">TAGS: ${post.tags}</div>` : '' }
+
+            <div class="post-card-excerpt">
+                ${post.excerpt} ...
+            </div>
+
+            ${tagsHtml}
         </article>
         `;
     });
