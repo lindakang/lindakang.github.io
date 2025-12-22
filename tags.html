@@ -1,0 +1,114 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="search-page">
+    
+    <header style="margin-bottom: 30px;">
+        <h1 style="color: #5d6eb3; font-weight: bold; font-size: 2rem; margin-bottom: 10px;">
+            tag: "<span id="tag-name" style="color: #333;"></span>"
+        </h1>
+        <p id="tag-meta" style="color: #666; font-size: 1.1rem;">
+            Loading...
+        </p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-top: 20px;">
+    </header>
+    
+    <div id="tag-results-container" class="post-cards-container">
+        </div>
+
+</div>
+
+<script>
+window.onload = function() {
+    // 1. 抓取網址上的 tag 參數
+    var urlParams = new URLSearchParams(window.location.search);
+    var targetTag = urlParams.get('tag');
+    
+    if (targetTag) {
+        // 顯示在標題上
+        document.getElementById('tag-name').innerText = targetTag;
+        var lowerTag = targetTag.toLowerCase();
+
+        // 2. 讀取資料庫
+        fetch('{{ "/search.json" | relative_url }}')
+            .then(response => response.json())
+            .then(data => {
+                var results = [];
+                data.forEach(function(item) {
+                    // 3. 精準比對 Tag (避免 "R" 對到 "Research")
+                    if (item.tags) {
+                        // 把 "Tag1, Tag2" 切割成陣列，並檢查是否有目標 Tag
+                        var tagsArray = item.tags.split(', ').map(t => t.trim().toLowerCase());
+                        if (tagsArray.includes(lowerTag)) {
+                            results.push(item);
+                        }
+                    }
+                });
+                
+                // 4. 顯示結果
+                updateTagMeta(results.length);
+                displayResults(results);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('tag-results-container').innerHTML = '<p>Unable to load tags.</p>';
+            });
+    } else {
+        document.getElementById('tag-name').innerText = "None";
+        document.getElementById('tag-meta').innerText = "No tag selected.";
+    }
+};
+
+function updateTagMeta(count) {
+    document.getElementById('tag-meta').innerText = `Found ${count} article(s)`;
+}
+
+function displayResults(results) {
+    var container = document.getElementById('tag-results-container');
+    container.innerHTML = '';
+
+    if (results.length === 0) {
+        container.innerHTML = '<p style="color:#666; padding:20px 0;">No articles found with this tag.</p>';
+        return;
+    }
+
+    var html = '';
+    results.forEach(function(post) {
+        // 產生 Tag 連結 HTML
+        var tagsHtml = '';
+        if (post.tags) {
+            var tagsArray = post.tags.split(', ');
+            tagsHtml = '<div class="post-card-tags" style="margin-top:15px;">';
+            tagsArray.forEach(function(tag){
+                tag = tag.trim(); 
+                if(tag) {
+                    // ⭐ 注意：這裡產生的標籤也是連結，可以連去其他 Tag
+                    tagsHtml += `<a href="{{ '/tags/' | relative_url }}?tag=${encodeURIComponent(tag)}" class="tag-pill-blue">${tag}</a>`;
+                }
+            });
+            tagsHtml += '</div>';
+        }
+
+        // 產生卡片
+        html += `
+        <article class="post-card">
+            <h3 class="post-card-title">
+                <a href="${post.url}">${post.title}</a>
+            </h3>
+            <div class="post-card-meta">
+                <span>${post.date}</span> &nbsp;•&nbsp; <span>${post.category}</span>
+            </div>
+            <div class="post-card-excerpt">
+                ${post.excerpt} ...
+            </div>
+            ${tagsHtml}
+        </article>
+        `;
+    });
+
+    container.innerHTML = html;
+}
+</script>
