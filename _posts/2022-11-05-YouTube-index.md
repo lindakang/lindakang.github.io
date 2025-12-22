@@ -35,7 +35,7 @@ List of YouTube videos that have been on daily trending list from
 ### YouTube Channel category
 
 | ID | Category |
-| --- | --- |
+| :--- | :--- |
 | 1 | Film & Animation |
 | 2 | Autos |
 | 10 | Music |
