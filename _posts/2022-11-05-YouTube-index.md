@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Kaggle - YouTube trending data 2020-2023
 date: 2022-11-05
 tags: [youtube, kaggle, data analysis]
