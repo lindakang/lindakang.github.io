@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="category-page">
+    
+    <header class="category-header" style="margin-bottom: 30px;">
+        <h1 style="color: #5d6eb3; font-weight: bold;">{{ page.title }}</h1>
+        {% if page.description %}
+            <p style="color: #666; font-size: 1.1rem; margin-top: 5px;">{{ page.description }}</p>
+        {% endif %}
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+    </header>
+
+    {% assign category_posts = site.categories[page.taxonomy] %}
+
+    {% if category_posts.size > 0 %}
+        <ul class="post-list" style="list-style: none; padding: 0;">
+            {% for post in category_posts %}
+            <li style="margin-bottom: 25px;">
+                <span style="color: #888; font-size: 0.9rem;">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <h3 style="margin: 5px 0;">
+                    <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333; font-weight: 600;">
+                        {{ post.title }}
+                    </a>
+                </h3>
+                {% if post.excerpt %}
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">
+                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </p>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div style="text-align: center; padding: 50px 0; color: #888;">
+            <p style="font-size: 1.1rem;">此分類暫無文章</p>
+        </div>
+    {% endif %}
+
+</div>
