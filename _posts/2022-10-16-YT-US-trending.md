@@ -3,7 +3,7 @@ layout: post
 title: YouTube trending video data (1) - US
 date: 2022-10-16
 tags: [youtube, kaggle, data analysis]
-categories: ["用 R 玩分析"]
+categories: ["閒時玩數據"]
 ---
 
 
