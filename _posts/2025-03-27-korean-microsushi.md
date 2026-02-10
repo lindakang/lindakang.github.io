@@ -1,12 +1,10 @@
 ---
+layout: post
 title: "未來食物新浪潮：韓國微壽司 — 米粒大小的壽司"
-category: ["有趣的研究"]
-tags:
-  - "培養肉"
-  - "永續食物"
-  - "韓國延世大學"
+date: 2025-03-27
+categories: ["有趣的研究"]
+tags: [培養肉, 永續食物, 壽司, 韓國延世大學]
 summary: "韓國延世大學研究團隊研發了富含蛋白質的「微牛肉壽司」，直接用牛肉細胞包裹米粒，創造出永續的替代性蛋白質食物。"
-readTime: "8 min read"
 ---
 
 ### ▋永續以及未來食物
@@ -19,7 +17,7 @@ readTime: "8 min read"
 
 由於永續議題興起，有些食材和食物開始流行了起來，包括植物肉、培養肉之類的替代性蛋白質等等。
 
-![未來食物](assets/images/future-food.png)
+![未來食物](/assets/images/未來食物.png)
 *未來食物*
 
 替代性蛋白質中，較有名的大概是 Beyond Meat，可能有人以為這是培養肉 (cultured meat)，但其實它是植物性肉類 (plant-based meat)。目前上市的培養肉公司有 UPSIDE Food 和 GOOD Meat，培養肉市場預估在 2034 年的時候可達到 $1.1B 美元。
@@ -36,7 +34,7 @@ readTime: "8 min read"
 
 他們首先用魚的膠質裹住米粒，然後鋪在培養皿中，再把牛的肌肉細胞和脂肪細胞丟進去，讓它們附著在米粒表面生長，也試了不同種類的細胞。之後，測量了這種微壽司的營養成分，結果是每吃 100 公克的微壽司相當於吃進 100 克的米和 1 克的牛肉。
 
-![微壽司](assets/images/microsushi.png)
+![微壽司](/assets/images/微壽司.png)
 *微壽司 - 用牛肉細胞包覆的米粒*
 
 ### 🌾 米的準備
@@ -85,3 +83,7 @@ readTime: "8 min read"
 
 S Park, M Lee, S Jung et al. Rice grains integrated with animal cells: A shortcut to a sustainable food system. Matter (2024)<br>
 DOI: [10.1016/j.matt.2024.01.015](https://www.cell.com/matter/abstract/S2590-2385%2824%2900016-X)
+
+
+
+
