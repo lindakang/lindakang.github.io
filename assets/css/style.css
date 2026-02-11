@@ -15,6 +15,23 @@ body {
     background-color: var(--bg-color);
 }
 
+/* ========================================= */
+/* --- 全域圖片設定 (防止圖片爆版) --- */
+/* ========================================= */
+
+img {
+    max-width: 100%;  /* ⭐ 關鍵：圖片寬度最多只能跟父容器一樣寬 */
+    height: auto;     /* 保持圖片比例，才不會被壓扁或拉長 */
+    display: block;   /* 讓圖片變成區塊元素，自己獨佔一行 */
+    margin: 25px auto; /* 讓圖片上下留點空白，並且在畫面中左右置中 */
+    border-radius: 4px; /* (選用) 加一點點小圓角，看起來比較柔和 */
+}
+
+/* 特別處理：讓 Logo 和側欄的小圖示不要置中，維持靠左 */
+.site-logo, .social-links img {
+     margin: 0 10px 10px 0;
+     display: inline-block;
+}
 a { color: var(--primary-color); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
